@@ -6,8 +6,8 @@
 
 /* Logo mark */
 .obs-logo-mark {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   background: var(--accent);
   color: #fff;
   border-radius: 8px;
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   flex-shrink: 0;
 }

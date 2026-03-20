@@ -1,5 +1,5 @@
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
-import './NavBar.css'
+import '../styles/NavBar.css'
 
 const BASE = import.meta.env.BASE_URL
 

@@ -9,6 +9,7 @@ import BikeFitting from './pages/BikeFitting'
 import BikeTradeIn from './pages/BikeTradeIn'
 import KidsBikeTradeUp from './pages/KidsBikeTradeUp'
 import Events from './pages/Events'
+import GroupRides from './pages/GroupRides'
 import AboutUs from './pages/AboutUs'
 import HoursLocation from './pages/HoursLocation'
 import ContactUs from './pages/ContactUs'
@@ -29,6 +30,7 @@ function App() {
           <Route path="/services/trade-in" element={<BikeTradeIn />} />
           <Route path="/services/kids-trade-up" element={<KidsBikeTradeUp />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/group-rides" element={<GroupRides />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/about/hours" element={<HoursLocation />} />
           <Route path="/about/contact" element={<ContactUs />} />

@@ -29,7 +29,10 @@ export default function NavBar() {
               <NavDropdown.Item as={Link} to="/services/kids-trade-up">Kids&apos; Bike Trade Up</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link as={Link} to="/events" className="obs-nav-link">Events</Nav.Link>
+            <NavDropdown title="Events" id="events-dropdown" className="obs-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/events">All Events</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/events/group-rides">Group Rides</NavDropdown.Item>
+            </NavDropdown>
 
             <NavDropdown title="About Us" id="about-dropdown" className="obs-nav-dropdown">
               <NavDropdown.Item as={Link} to="/about" className="obs-dropdown-about-link">About Us</NavDropdown.Item>

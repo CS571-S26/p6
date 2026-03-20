@@ -1,26 +1,26 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #1b3a6b;
-  --accent-bg: #f0f2f5;
-  --accent-border: rgba(27, 58, 107, 0.35);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #5a5248;
+  --text-h: #1e1a16;
+  --bg: #faf8f5;
+  --border: #ddd9d3;
+  --code-bg: #f0ece4;
+  --accent: #3b6e2e;
+  --accent-bg: #edf2ea;
+  --accent-border: rgba(59, 110, 46, 0.35);
+  --social-bg: rgba(237, 242, 234, 0.6);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
 
   --white: #fff;
-  --footer-bg: #0d1f3c;
-  --footer-text: #9ca3af;
-  --footer-text-muted: #6b7280;
-  --footer-heading: #e5e7eb;
+  --footer-bg: #1e2b1a;
+  --footer-text: #9caa96;
+  --footer-text-muted: #6b7a65;
+  --footer-heading: #dde5da;
   --footer-border: rgba(255, 255, 255, 0.08);
-  --footer-copy: #4b5563;
+  --footer-copy: #4b5a46;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: Georgia, 'Times New Roman', serif;
+  --heading: Georgia, 'Times New Roman', serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -67,7 +67,7 @@ body {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   min-height: 100svh;
   display: flex;
   flex-direction: column;

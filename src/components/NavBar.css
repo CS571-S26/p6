@@ -1,0 +1,123 @@
+.obs-navbar {
+  text-align: left;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Logo mark */
+.obs-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+/* Nav links */
+.obs-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text) !important;
+  border-radius: 6px;
+  padding: 6px 12px !important;
+  transition: color 0.15s, background 0.15s;
+}
+
+.obs-nav-link:hover,
+.obs-nav-link:focus {
+  color: var(--text-h) !important;
+  background: var(--accent-bg);
+}
+
+/* Dropdown toggles */
+.obs-nav-dropdown > .nav-link,
+.obs-nav-dropdown .dropdown-toggle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text) !important;
+  border-radius: 6px;
+  padding: 6px 12px !important;
+  transition: color 0.15s, background 0.15s;
+}
+
+.obs-nav-dropdown > .nav-link:hover,
+.obs-nav-dropdown .dropdown-toggle:hover {
+  color: var(--text-h) !important;
+  background: var(--accent-bg);
+}
+
+/* Dropdown menus */
+.obs-nav-dropdown .dropdown-menu {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 6px;
+  min-width: 210px;
+  margin-top: 4px;
+}
+
+.obs-nav-dropdown .dropdown-item {
+  font-size: 13.5px;
+  color: var(--text);
+  border-radius: 6px;
+  padding: 8px 12px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.obs-nav-dropdown .dropdown-item:hover {
+  color: var(--text-h);
+  background: var(--accent-bg);
+}
+
+/* "About Us" page link inside dropdown — styled slightly bolder */
+.obs-dropdown-about-link {
+  font-weight: 600;
+  color: var(--text-h) !important;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-nav {
+    width: 100%;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .obs-nav-link {
+    border-radius: 0;
+    padding: 10px 16px !important;
+    width: 100%;
+  }
+
+  .obs-nav-dropdown .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    padding: 10px 16px !important;
+  }
+
+  /* Inline dropdowns on mobile */
+  .obs-nav-dropdown .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: var(--accent-bg);
+    padding: 4px 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .obs-nav-dropdown .dropdown-item {
+    padding-left: 32px;
+    border-radius: 0;
+  }
+}

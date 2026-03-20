@@ -1,38 +1,43 @@
-import { useState } from 'react'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import ShopBikes from './pages/ShopBikes'
+import BikeServiceRepair from './pages/BikeServiceRepair'
+import BikeFitting from './pages/BikeFitting'
+import BikeTradeIn from './pages/BikeTradeIn'
+import KidsBikeTradeUp from './pages/KidsBikeTradeUp'
+import Events from './pages/Events'
+import AboutUs from './pages/AboutUs'
+import HoursLocation from './pages/HoursLocation'
+import ContactUs from './pages/ContactUs'
+import WorkWithUs from './pages/WorkWithUs'
+import JackiesPage from './pages/JackiesPage'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
+    <HashRouter>
       <NavBar />
-
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Oregon Bike Shop</h1>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
+      <main style={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<ShopBikes />} />
+          <Route path="/services/repair" element={<BikeServiceRepair />} />
+          <Route path="/services/fitting" element={<BikeFitting />} />
+          <Route path="/services/trade-in" element={<BikeTradeIn />} />
+          <Route path="/services/kids-trade-up" element={<KidsBikeTradeUp />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about/hours" element={<HoursLocation />} />
+          <Route path="/about/contact" element={<ContactUs />} />
+          <Route path="/about/work-with-us" element={<WorkWithUs />} />
+          <Route path="/jackie" element={<JackiesPage />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </HashRouter>
   )
 }
 

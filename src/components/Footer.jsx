@@ -1,46 +1,46 @@
-import { Container, Row, Col } from "react-bootstrap";
-import "../styles/Footer.css";
-
-const BASE = import.meta.env.BASE_URL;
+import { Link } from 'react-router-dom'
+import { Container, Row, Col } from 'react-bootstrap'
+import '../styles/Footer.css'
 
 function Logo() {
   return (
-    <a
-      href={BASE}
-      className="obs-footer-logo d-flex align-items-center gap-2 text-decoration-none mb-3"
-    >
+    <Link to="/" className="obs-footer-logo d-flex align-items-center gap-2 text-decoration-none mb-3">
       <div className="obs-logo-mark">OBS</div>
-    </a>
-  );
+    </Link>
+  )
 }
 
 const footerSections = [
   {
-    title: "Shop",
-    links: [{ label: "Shop Bikes", href: `${BASE}shop` }],
-  },
-  {
-    title: "Services",
+    title: 'Shop',
     links: [
-      { label: "Bike Service Repair", href: `${BASE}services/repair` },
-      { label: "Bike Fitting", href: `${BASE}services/fitting` },
-      { label: "Bike Trade In", href: `${BASE}services/trade-in` },
-      { label: "Kids' Bike Trade Up", href: `${BASE}services/kids-trade-up` },
+      { label: 'Shop Bikes', to: '/shop' },
     ],
   },
   {
-    title: "Events",
-    links: [{ label: "Events", href: `${BASE}events` }],
-  },
-  {
-    title: "About Us",
+    title: 'Services',
     links: [
-      { label: "Hours & Location", href: `${BASE}about/hours` },
-      { label: "Contact Us", href: `${BASE}about/contact` },
-      { label: "Work With Us", href: `${BASE}about/work-with-us` },
+      { label: 'Bike Service Repair', to: '/services/repair' },
+      { label: 'Bike Fitting', to: '/services/fitting' },
+      { label: 'Bike Trade In', to: '/services/trade-in' },
+      { label: "Kids' Bike Trade Up", to: '/services/kids-trade-up' },
     ],
   },
-];
+  {
+    title: 'Events',
+    links: [
+      { label: 'Events', to: '/events' },
+    ],
+  },
+  {
+    title: 'About Us',
+    links: [
+      { label: 'Hours & Location', to: '/about/hours' },
+      { label: 'Contact Us', to: '/about/contact' },
+      { label: 'Work With Us', to: '/about/work-with-us' },
+    ],
+  },
+]
 
 export default function Footer() {
   return (
@@ -51,13 +51,12 @@ export default function Footer() {
           <Col xs={12} md={4} lg={3}>
             <Logo />
             <p className="obs-footer-tagline">
-              Your local bike shop in Oregon.
-              <br />
+              Your local bike shop in Oregon.<br />
               Ride more, worry less.
             </p>
           </Col>
 
-          {/* Spacer on large screens to push links rightward */}
+          {/* Spacer on large screens */}
           <Col lg={1} className="d-none d-lg-block" />
 
           {/* Links grid */}
@@ -68,10 +67,8 @@ export default function Footer() {
                   <h6 className="obs-footer-heading">{section.title}</h6>
                   <ul className="list-unstyled obs-footer-links">
                     {section.links.map((link) => (
-                      <li key={link.href}>
-                        <a href={link.href} className="obs-footer-link">
-                          {link.label}
-                        </a>
+                      <li key={link.to}>
+                        <Link to={link.to} className="obs-footer-link">{link.label}</Link>
                       </li>
                     ))}
                   </ul>
@@ -86,11 +83,10 @@ export default function Footer() {
       <div className="obs-footer-bottom">
         <Container fluid="xl">
           <p className="mb-0 text-center obs-footer-copy">
-            &copy; {new Date().getFullYear()} Oregon Bike Shop. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Oregon Bike Shop. All rights reserved.
           </p>
         </Container>
       </div>
     </footer>
-  );
+  )
 }

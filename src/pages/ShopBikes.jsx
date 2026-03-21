@@ -1,5 +1,7 @@
-import { useEffect, useRef } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import { Container, Button } from "react-bootstrap";
+import ColoredHeading from "../components/ColoredHeading";
 import "../styles/ShopBikes.css";
 
 const categoryPathMap = {
@@ -11,6 +13,7 @@ const categoryPathMap = {
   gravel: "/search/all/activities/gravel-bikes",
   "apparel-accessories": "/search/all/activities/cycling-access",
   clothing: "/search/all/activities/clothing-accessories",
+  helmets: "/search/all/activities/bike-helmets",
 };
 
 const categoryLabels = [
@@ -23,40 +26,46 @@ const categoryLabels = [
   { label: "Gravel", category: "gravel" },
   { label: "Cycling Accessories", category: "apparel-accessories" },
   { label: "Clothing", category: "clothing" },
+  { label: "Helmets", category: "helmets" },
 ];
 
 export default function ShopBikes() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const widgetLoaded = useRef(false);
   const category = searchParams.get("category") || "";
-  const categoryPath = categoryPathMap[category] || "";
 
-  // Load the widget script once
   useEffect(() => {
-    if (widgetLoaded.current) return;
+    const config = {
+      store: "321934",
+      uri: "search",
+    };
 
-    const container = document.getElementById("lcly-button-0");
-    if (!container) return;
+    const query = Object.keys(config)
+      .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(config[k]))
+      .join("&");
 
+    const endpoint =
+      "https://oregonbicyclecompany.locally.com/widgets/search.js?" + query;
+
+    // Remove any previous script to avoid duplicates
     const existing = document.getElementById("lcly-script-0");
     if (existing) existing.remove();
 
     const script = document.createElement("script");
     script.id = "lcly-script-0";
-    script.src =
-      "https://oregonbicyclecompany.locally.com/widgets/search.js?store=321934&uri=search";
+    script.src = endpoint;
     script.async = true;
-    container.appendChild(script);
-    widgetLoaded.current = true;
+    document.getElementById("lcly-button-0").appendChild(script);
+
+    return () => {
+      const el = document.getElementById("lcly-script-0");
+      if (el) el.remove();
+    };
   }, []);
 
   // Update the iframe src when category changes
   useEffect(() => {
-    const host = window.location.hostname;
-    const baseSrc = `https://oregonbicyclecompany.locally.com/search?embed_type=store&store=321934&uri=search&host_domain=${host}`;
-    const categorySrc = `https://oregonbicyclecompany.locally.com${categoryPath}?embed_type=store&store=321934&sort=pop&host_domain=${host}`;
-    const targetSrc = categoryPath ? categorySrc : baseSrc;
+    const categoryPath = categoryPathMap[category] || "";
 
     const updateIframe = () => {
       const container = document.getElementById("lcly-button-0");
@@ -64,13 +73,22 @@ export default function ShopBikes() {
       const iframe = container.querySelector("iframe");
       if (!iframe) return false;
 
-      if (iframe.src !== targetSrc) {
-        iframe.src = targetSrc;
+      const host = window.location.hostname;
+      if (categoryPath) {
+        const targetSrc = `https://oregonbicyclecompany.locally.com${categoryPath}?embed_type=store&store=321934&sort=pop&host_domain=${host}`;
+        if (iframe.src !== targetSrc) {
+          iframe.src = targetSrc;
+        }
+      } else {
+        // "All" — reset to default
+        const defaultSrc = `https://oregonbicyclecompany.locally.com/search?embed_type=store&store=321934&uri=search&host_domain=${host}`;
+        if (iframe.src !== defaultSrc) {
+          iframe.src = defaultSrc;
+        }
       }
       return true;
     };
 
-    // The iframe may not exist yet on first load, so poll briefly
     if (updateIframe()) return;
 
     const interval = setInterval(() => {
@@ -78,7 +96,7 @@ export default function ShopBikes() {
     }, 200);
 
     return () => clearInterval(interval);
-  }, [categoryPath]);
+  }, [category]);
 
   const handleCategory = (cat) => {
     navigate(cat ? `/shop?category=${cat}` : "/shop");
@@ -86,6 +104,26 @@ export default function ShopBikes() {
 
   return (
     <>
+      <Container className="py-5 text-center">
+        <ColoredHeading text="Shop Bikes" />
+        <p className="shop-hero-text mx-auto">
+          Explore our current bike inventory online and reserve the right bike
+          from home, or stop by during open hours for one-on-one help from our
+          team. Whether you&apos;re just getting started or looking for your next
+          upgrade, we&apos;re here to answer questions, help with fit, and get you
+          out on a test ride.
+        </p>
+        <Button
+          as={Link}
+          to="/about/hours"
+          variant="outline-primary"
+          size="lg"
+          className="shop-hero-btn mt-3"
+        >
+          Visit Us
+        </Button>
+      </Container>
+
       <div className="shop-filter-bar">
         {categoryLabels.map((item) => (
           <button

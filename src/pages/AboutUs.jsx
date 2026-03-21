@@ -7,6 +7,9 @@ import heroImg from "../assets/picOfMerch.webp";
 import staffImg1 from "../assets/macAndKrysten.webp";
 import staffImg2 from "../assets/Oliver.webp";
 import staffImg3 from "../assets/Miranda&Jamie.webp";
+import bikeQualityImg from "../assets/bike-quality.webp";
+import friendlyStaffImg from "../assets/friendly-staff.webp";
+import bikePickupImg from "../assets/bike-pickup.webp";
 
 const staff = [
   {
@@ -23,6 +26,11 @@ const staff = [
     name: "Miranda & Jamie",
     description: "Short description about this team member and their role.",
     image: staffImg3,
+  },
+  {
+    name: "Maggie & Seth",
+    description: "Short description about this team member and their role.",
+    image: "https://placehold.co/600x600?text=Maggie+%26+Seth",
   },
 ];
 
@@ -61,6 +69,79 @@ export default function AboutUs() {
             connection, community, and good service just as much as the bikes
             themselves.
           </p>
+        </section>
+
+        {/* Why Oregon Bike Company */}
+        <section className="why-section mb-5">
+          <ColoredHeading text="Why Oregon Bike Company?" />
+          <p className="why-supporting">
+            We&apos;re proud to be a local bike shop serving Oregon, Wisconsin with
+            quality bikes, trusted service, and a welcoming community for riders
+            of all ages and abilities.
+          </p>
+
+          <Row className="g-4 mt-3">
+            <Col xs={12} sm={6} md={4}>
+              <Card className="why-card h-100 border-0">
+                <Card.Img
+                  variant="top"
+                  src={bikeQualityImg}
+                  alt="Local, Quality Bikes"
+                  className="why-card-img"
+                />
+                <Card.Body>
+                  <Card.Title className="why-card-title">
+                    Local, Quality Bikes
+                  </Card.Title>
+                  <Card.Text className="why-card-text">
+                    We carry a thoughtful selection of bikes, gear, and
+                    accessories chosen for the riders in our community. Our focus
+                    is on quality, value, and helping you find the right fit.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4}>
+              <Card className="why-card h-100 border-0">
+                <Card.Img
+                  variant="top"
+                  src={friendlyStaffImg}
+                  alt="Friendly, Helpful Service"
+                  className="why-card-img"
+                />
+                <Card.Body>
+                  <Card.Title className="why-card-title">
+                    Friendly, Helpful Service
+                  </Card.Title>
+                  <Card.Text className="why-card-text">
+                    Whether you need repairs, maintenance, or advice, our team is
+                    here to help. We want every rider to feel comfortable,
+                    supported, and confident when they walk through our doors.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} sm={6} md={4}>
+              <Card className="why-card h-100 border-0">
+                <Card.Img
+                  variant="top"
+                  src={bikePickupImg}
+                  alt="Built Around Community"
+                  className="why-card-img"
+                />
+                <Card.Body>
+                  <Card.Title className="why-card-title">
+                    Free Local Pickup
+                  </Card.Title>
+                  <Card.Text className="why-card-text">
+                    Oregon Bike Company is more than a shop. We&apos;re a place for
+                    local riders to connect through events, group rides, shared
+                    knowledge, and a love of being on two wheels.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </section>
 
         {/* Our Staff section */}

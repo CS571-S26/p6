@@ -11,6 +11,16 @@ import bodihow1Img from "../assets/HopsWithBodiWall.webp";
 import bodihow2Img from "../assets/VibrantBeer.webp";
 import bodihow3Img from "../assets/Carne Asada Bowl.webp";
 import ColoredHeading from "../components/ColoredHeading";
+import HoursLocationWidget from "../components/HoursLocationWidget";
+import mountainImg from "../assets/mountainBike.jpg";
+import electricImg from "../assets/electricBike.jpg";
+import kidsImg from "../assets/kidsBike.jpg";
+import hybridImg from "../assets/hybridBike.jpg";
+import roadImg from "../assets/roadBike.jpg";
+import gravelImg from "../assets/gravelBike.jpg";
+import accessoriesImg from "../assets/cyclingAccessories.jpg";
+import clothingImg from "../assets/clothing.jpg";
+import helmetImg from "../assets/helmet.jpg";
 
 export default function Home() {
   return (
@@ -63,20 +73,22 @@ export default function Home() {
         <ColoredHeading text="Shop by Category" className="text-center mb-4 home-heading" />
         <div className="shop-category-scroll">
           {[
-            { label: "Mountain Bikes", category: "mountain" },
-            { label: "Electric Bikes", category: "electric" },
-            { label: "Kids Bikes", category: "kids" },
-            { label: "Hybrid Bikes", category: "hybrid" },
-            { label: "Road Bikes", category: "road" },
-            { label: "Gravel Bikes", category: "gravel" },
-            { label: "Cycling Accessories", category: "apparel-accessories" },
-            { label: "Clothing", category: "clothing" },
+            { label: "Mountain Bikes", category: "mountain", img: mountainImg },
+            { label: "Electric Bikes", category: "electric", img: electricImg },
+            { label: "Kids Bikes", category: "kids", img: kidsImg },
+            { label: "Hybrid Bikes", category: "hybrid", img: hybridImg },
+            { label: "Road Bikes", category: "road", img: roadImg },
+            { label: "Gravel Bikes", category: "gravel", img: gravelImg },
+            { label: "Cycling Accessories", category: "apparel-accessories", img: accessoriesImg },
+            { label: "Clothing", category: "clothing", img: clothingImg },
+            { label: "Helmets", category: "helmets", img: helmetImg },
           ].map((item) => (
             <Link
               key={item.category}
               to={`/shop?category=${item.category}`}
               className="shop-category-card"
             >
+              <img src={item.img} alt={item.label} className="shop-category-img" />
               <span className="shop-category-label">{item.label}</span>
             </Link>
           ))}
@@ -141,68 +153,76 @@ export default function Home() {
         </Row>
       </div>
 
-      <div className="more-section">
-      <ColoredHeading
-        text="More than a Bike Shop"
-        className="text-center my-5 home-heading"
-      />
+      {/* More than a Bike Shop */}
+      <section className="community-section">
+        <div className="community-header text-center">
+          <ColoredHeading text="More than a Bike Shop" className="home-heading" />
+          <p className="community-subheading">
+            We&apos;re proud to be part of the Oregon community, creating spaces to ride, gather, and connect.
+          </p>
+        </div>
 
-      {/* Events section */}
-      <div className="events-section">
-        <Row className="align-items-center g-4">
-          <Col xs={12} md={6} className="text-center events-content">
-            <p className="events-text">
-              Join us for weekly group runs and rides every Wednesday night,
-              along with other community events that are updated regularly on
-              our site. Whether you&apos;re coming out to ride, run, or just stay
-              connected with what&apos;s happening around the shop, there&apos;s always
-              something going on at Oregon Bike Company.
-            </p>
-            <p className="events-cta">
+        <Container>
+          {/* Events row */}
+          <div className="community-row">
+            <div className="community-text">
+              <span className="community-eyebrow">Events</span>
+              <h2 className="community-title">Rides, Runs, and Community Events</h2>
+              <p className="community-desc">
+                Join us for weekly group runs and rides every Wednesday night,
+                along with other community events that are updated regularly on
+                our site. Whether you&apos;re coming out to ride, run, or just stay
+                connected, there&apos;s always something going on at Oregon Bike Company.
+              </p>
               <Button
                 as={Link}
                 to="/events"
                 variant="outline-primary"
-                className="visit-btn ms-2"
+                className="community-btn"
               >
                 View Events
               </Button>
-            </p>
-          </Col>
-          <Col xs={12} md={6}>
-            <img src={eventsImg} alt="OBC Events" className="events-img" />
-          </Col>
-        </Row>
-      </div>
+            </div>
+            <div className="community-image-wrap">
+              <img src={eventsImg} alt="OBC Events" className="community-img" />
+            </div>
+          </div>
 
-      {/* Jackie section */}
-      <div className="events-section">
-        <Row className="align-items-center g-4">
-          <Col xs={12} md={6}>
-            <img
-              src="https://placehold.co/600x400?text=Jackie+Image"
-              alt="Jackie"
-              className="events-img"
-            />
-          </Col>
-          <Col xs={12} md={6} className="text-center events-content">
-            <p className="events-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. A
-              placeholder section for more information about what we do.
-            </p>
-            <Button
-              as={Link}
-              to="/jackie"
-              variant="outline-primary"
-              className="visit-btn"
-            >
-              Here
-            </Button>
-          </Col>
-        </Row>
-      </div>
-      </div>
+          {/* Community row (flipped) */}
+          <div className="community-row community-row--flipped">
+            <div className="community-text">
+              <span className="community-eyebrow">Community</span>
+              <h2 className="community-title">Local Roots, Lasting Connections</h2>
+              <p className="community-desc">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. A
+                placeholder section for more information about what we do.
+              </p>
+              <Button
+                as={Link}
+                to="/jackie"
+                variant="outline-primary"
+                className="community-btn"
+              >
+                Learn More
+              </Button>
+            </div>
+            <div className="community-image-wrap">
+              <img
+                src="https://placehold.co/600x400?text=Community"
+                alt="Community"
+                className="community-img"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Hours & Location */}
+      <Container className="py-5">
+        <ColoredHeading text="Hours & Location" className="text-center mb-4 home-heading" />
+        <HoursLocationWidget />
+      </Container>
 
       {/* Bodihow Brewing Company section */}
       <Container className="py-5">

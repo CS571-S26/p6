@@ -1,42 +1,53 @@
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import ColoredHeading from '../components/ColoredHeading'
-import '../styles/BikeServiceRepair.css'
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ColoredHeading from "../components/ColoredHeading";
+import "../styles/BikeServiceRepair.css";
 
-import heroImg from '../assets/kidTradeUp.webp'
-import whyImg from '../assets/bikeGroupWithHandsInAir.webp'
+import heroImg from "../assets/kidTradeUp.webp";
+import whyImg from "../assets/bikeGroupWithHandsInAir.webp";
 
 const steps = [
   {
-    number: '1',
-    text: 'Bring in your child\'s current bike for a fast and easy evaluation.',
+    number: "1",
+    text: "Bring in your child's current bike for a fast and easy evaluation.",
   },
   {
-    number: '2',
-    text: 'Shop for the next size up while we assess your trade-in.',
+    number: "2",
+    text: "Shop for the next size up while we assess your trade-in.",
   },
   {
-    number: '3',
-    text: 'Apply up to 50% of the original price as credit and ride!',
+    number: "3",
+    text: "Apply up to 50% of the original price as credit and ride!",
   },
-]
+];
 
 export default function KidsBikeTradeUp() {
   return (
     <div className="obs-service-page">
       {/* Hero Banner */}
       <div className="obs-service-hero">
-        <img src={heroImg} alt="Kids on bikes" className="obs-service-hero-img" />
+        <img
+          src={heroImg}
+          alt="Kids on bikes"
+          className="obs-service-hero-img"
+        />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">Kids&apos; Bike Trade-Up</h1>
-          <p className="obs-service-hero-sub">Kids grow fast. We&apos;re here to help.</p>
+          <p className="obs-service-hero-sub">
+            Kids grow fast. We&apos;re here to help.
+          </p>
         </div>
       </div>
 
       <Container fluid="xl" className="py-5">
         {/* Intro */}
         <p className="obs-intro-text mb-5">
-          Thanks to our Kids&apos; Bike Trade-Up Program, your child can ride a high quality bike that fits well despite those unexpected growth spurts. When your little cyclist is ready for the next bike size, we&apos;ll give you up to <strong>50% of your original bike purchase</strong> as a credit towards a bigger kids&apos; bike.
+          Thanks to our Kids&apos; Bike Trade-Up Program, your child can ride a
+          high quality bike that fits well despite those unexpected growth
+          spurts. When your little cyclist is ready for the next bike size,
+          we&apos;ll give you up to{" "}
+          <strong>50% of your original bike purchase</strong> as a credit
+          towards a bigger kids&apos; bike.
         </p>
 
         {/* Why Choose Us */}
@@ -52,16 +63,27 @@ export default function KidsBikeTradeUp() {
             <ColoredHeading text="Why Choose Our Bike Shop?" as="h2" />
             <hr className="obs-section-divider" />
             <p className="obs-intro-text">
-              The kids&apos; bikes we carry are designed with the same level of detail that goes into our adult bikes. They feature lightweight frames and durable components, making them fun and safe for your child. We also have a sweet selection of sizes and colors — all fine-tuned by professional mechanics and ready for you.
+              The kids&apos; bikes we carry are designed with the same level of
+              detail that goes into our adult bikes. They feature lightweight
+              frames and durable components, making them fun and safe for your
+              child. We also have a sweet selection of sizes and colors, all
+              fine-tuned by professional mechanics and ready for you.
             </p>
           </Col>
         </Row>
 
         {/* How It Works */}
-        <ColoredHeading text="How Does Trading Up Work?" as="h2" className="mt-2" />
+        <ColoredHeading
+          text="How Does Trading Up Work?"
+          as="h2"
+          className="mt-2"
+        />
         <hr className="obs-section-divider" />
         <p className="obs-intro-text mb-4">
-          Our Kids&apos; Bike Trade-Up Program is simple — invest in a quality bike today, and bring it back to us when your child is ready for the next size. This program is valid until your child is ready for an adult bike!
+          Our Kids&apos; Bike Trade-Up Program is simple: invest in a quality
+          bike today, and bring it back to us when your child is ready for the
+          next size. This program is valid until your child is ready for an
+          adult bike!
         </p>
 
         <div className="obs-steps mb-5">
@@ -75,12 +97,14 @@ export default function KidsBikeTradeUp() {
 
         {/* CTA */}
         <div className="obs-tradein-cta">
-          <p>Come in and ask us about the Kids&apos; Bike Trade-Up Program today.</p>
+          <p>
+            Come in and ask us about the Kids&apos; Bike Trade-Up Program today.
+          </p>
           <Button as={Link} to="/about/contact" className="obs-btn-shop">
             Contact Us
           </Button>
         </div>
       </Container>
     </div>
-  )
+  );
 }

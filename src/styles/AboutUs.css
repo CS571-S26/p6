@@ -17,6 +17,50 @@
   font-size: var(--fs-md);
 }
 
+/* ── Why Oregon Bike Company ─────────────────────────────── */
+.why-section {
+  text-align: center;
+}
+
+.why-supporting {
+  color: var(--color-text);
+  font-size: var(--fs-md);
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0.5rem auto 0;
+}
+
+.why-card {
+  background: var(--color-bg);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+}
+
+.why-card-img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.why-card-title {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--fs-base);
+  color: var(--color-text-heading);
+  margin-bottom: 0.25rem;
+}
+
+.why-card-text {
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
 .staff-subtitle {
   color: var(--text);
   font-size: var(--fs-base);

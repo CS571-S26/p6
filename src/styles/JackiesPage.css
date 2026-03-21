@@ -1,0 +1,68 @@
+/* Collage grid */
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.collage-item {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.collage-item.tall {
+  grid-row: span 2;
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.collage-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .collage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collage-item.tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .collage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Jackie text */
+.jackie-text {
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* Socials */
+.socials-text {
+  color: var(--text-h);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.instagram-link {
+  color: var(--accent);
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.instagram-link:hover {
+  color: #E1306C;
+  transform: scale(1.15);
+}

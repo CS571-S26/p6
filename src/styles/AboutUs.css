@@ -1,0 +1,80 @@
+.about-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-description {
+  max-width: 700px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.staff-subtitle {
+  color: var(--text);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.hiring-btn {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hiring-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.staff-card {
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-4px);
+}
+
+.staff-card-img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.staff-name {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.staff-desc {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .about-hero-img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero-img {
+    height: 200px;
+  }
+}

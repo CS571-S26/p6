@@ -31,6 +31,15 @@
   margin-bottom: 0.875rem;
 }
 
+.obs-footer-heading-link {
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.obs-footer-heading-link:hover .obs-footer-heading {
+  color: var(--white);
+}
+
 .obs-footer-links {
   display: flex;
   flex-direction: column;

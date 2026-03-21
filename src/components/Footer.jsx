@@ -36,6 +36,7 @@ const footerSections = [
   },
   {
     title: 'About Us',
+    to: '/about',
     links: [
       { label: 'Hours & Location', to: '/about/hours' },
       { label: 'Contact Us', to: '/about/contact' },
@@ -66,7 +67,13 @@ export default function Footer() {
             <Row className="gy-4">
               {footerSections.map((section) => (
                 <Col key={section.title} xs={12} sm={6} md={3}>
-                  <h6 className="obs-footer-heading">{section.title}</h6>
+                  {section.to ? (
+                    <Link to={section.to} className="obs-footer-heading-link">
+                      <h6 className="obs-footer-heading">{section.title}</h6>
+                    </Link>
+                  ) : (
+                    <h6 className="obs-footer-heading">{section.title}</h6>
+                  )}
                   <ul className="list-unstyled obs-footer-links">
                     {section.links.map((link) => (
                       <li key={link.to}>

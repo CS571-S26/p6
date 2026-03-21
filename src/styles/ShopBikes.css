@@ -3,32 +3,7 @@
   font-size: 1.1rem;
 }
 
-.shop-bikes-btn {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.shop-bikes-btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--white);
-}
-
-.shop-bikes-banner {
+.shop-bikes-widget-wrapper {
   width: 100%;
-  overflow: hidden;
-}
-
-.shop-bikes-banner-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  object-position: center 75%;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .shop-bikes-banner-img {
-    height: 280px;
-  }
+  padding: 0 1rem 3rem;
 }

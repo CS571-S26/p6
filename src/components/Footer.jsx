@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../styles/Footer.css'
-import logo from '../assets/OBC_logo_black_no_shadows_all_black.png'
+import logo from '../assets/light bike shop logo vector.webp'
 
 function Logo() {
   return (

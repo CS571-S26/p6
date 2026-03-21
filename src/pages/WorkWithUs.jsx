@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
+import ColoredHeading from '../components/ColoredHeading'
 import '../styles/BikeServiceRepair.css'
 import '../styles/WorkWithUs.css'
 
@@ -50,14 +51,14 @@ export default function WorkWithUs() {
         </div>
       </div>
 
-      <Container fluid="xl" className="py-5 wwu-form-container">
+      <Container fluid="xl" className="py-5 wwu-form-container text-center">
         {/* Intro text */}
-        <h2 className="obs-section-title">We&apos;re Hiring</h2>
-        <hr className="obs-section-divider" />
-        <p className="obs-section-sub mb-3">
+        <ColoredHeading text="We're Hiring" as="h2" className="text-center" />
+        <hr className="obs-section-divider mx-auto" />
+        <p className="obs-section-sub mx-auto mb-3" style={{ maxWidth: '40rem' }}>
           Oregon Bike Shop is a small, community-focused shop in Oregon, WI. We care about bikes, our neighbors, and doing good work. If that sounds like you, we&apos;d love to hear from you.
         </p>
-        <p className="obs-section-sub mb-5">
+        <p className="obs-section-sub mx-auto mb-5" style={{ maxWidth: '40rem' }}>
           We hire for mechanical, sales, and events roles throughout the year. Even if we don&apos;t have an opening right now, send us your info and we&apos;ll keep you in mind.
         </p>
 

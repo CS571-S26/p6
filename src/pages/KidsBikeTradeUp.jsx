@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import ColoredHeading from '../components/ColoredHeading'
 import '../styles/BikeServiceRepair.css'
 
 import heroImg from '../assets/kidTradeUp.webp'
@@ -48,7 +49,7 @@ export default function KidsBikeTradeUp() {
             />
           </Col>
           <Col md={6}>
-            <h2 className="obs-section-title">Why Choose Our Bike Shop?</h2>
+            <ColoredHeading text="Why Choose Our Bike Shop?" as="h2" />
             <hr className="obs-section-divider" />
             <p className="obs-intro-text">
               The kids&apos; bikes we carry are designed with the same level of detail that goes into our adult bikes. They feature lightweight frames and durable components, making them fun and safe for your child. We also have a sweet selection of sizes and colors — all fine-tuned by professional mechanics and ready for you.
@@ -57,7 +58,7 @@ export default function KidsBikeTradeUp() {
         </Row>
 
         {/* How It Works */}
-        <h2 className="obs-section-title mt-2">How Does Trading Up Work?</h2>
+        <ColoredHeading text="How Does Trading Up Work?" as="h2" className="mt-2" />
         <hr className="obs-section-divider" />
         <p className="obs-intro-text mb-4">
           Our Kids&apos; Bike Trade-Up Program is simple — invest in a quality bike today, and bring it back to us when your child is ready for the next size. This program is valid until your child is ready for an adult bike!

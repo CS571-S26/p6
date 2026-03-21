@@ -1,9 +1,37 @@
-.shop-bikes-subtitle {
-  color: var(--text);
-  font-size: 1.1rem;
+.shop-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.shop-filter-pill {
+  padding: 0.4rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  background: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.shop-filter-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text-heading);
+}
+
+.shop-filter-pill.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
 }
 
 .shop-bikes-widget-wrapper {
   width: 100%;
-  padding: 0 1rem 3rem;
+  padding: 1rem 1rem 3rem;
 }

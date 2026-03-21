@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
+import ColoredHeading from '../components/ColoredHeading'
 import '../styles/ContactUs.css'
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:3001'
@@ -36,9 +37,9 @@ export default function ContactUs() {
   }
 
   return (
-    <Container className="py-5 contact-container">
-      <h1>Contact Us</h1>
-      <p className="contact-intro">
+    <Container className="py-5 contact-container text-center">
+      <ColoredHeading text="Contact Us" className="text-center" />
+      <p className="contact-intro mx-auto">
         Have a question about a repair, fit appointment, or anything else? Send us a message and we&apos;ll get back to you soon.
       </p>
 

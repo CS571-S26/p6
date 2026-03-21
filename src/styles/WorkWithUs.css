@@ -6,7 +6,7 @@
 }
 
 .wwu-form-wrap {
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
 }
 
@@ -14,17 +14,17 @@
 .wwu-form .form-label {
   font-weight: 500;
   color: var(--color-text-heading);
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
 }
 
 .wwu-form .form-control {
   border-color: var(--color-border);
   border-radius: 4px;
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
   color: var(--color-text-heading);
 }
 
 .wwu-form .form-control:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(59, 110, 46, 0.15);
+  box-shadow: 0 0 0 3px rgba(250, 175, 65, 0.25);
 }

@@ -8,7 +8,7 @@
 }
 
 .obs-footer-logo-img {
-  height: 50px;
+  height: 140px;
   width: auto;
   object-fit: contain;
   letter-spacing: 0.5px;
@@ -16,30 +16,30 @@
 }
 
 .obs-footer-tagline {
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   color: var(--footer-text-muted);
   line-height: 1.6;
   margin: 0;
 }
 
 .obs-footer-heading {
-  font-size: 11px;
+  font-size: var(--fs-sm);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--footer-heading);
-  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
 }
 
 .obs-footer-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   margin: 0;
 }
 
 .obs-footer-link {
-  font-size: 13.5px;
+  font-size: var(--fs-sm);
   color: var(--footer-text-muted);
   text-decoration: none;
   transition: color 0.15s;
@@ -51,10 +51,10 @@
 
 .obs-footer-bottom {
   border-top: 1px solid var(--footer-border);
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 .obs-footer-copy {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--footer-copy);
 }

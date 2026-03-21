@@ -4,26 +4,26 @@
 }
 
 .contact-form-wrap {
-  max-width: 560px;
+  max-width: 35rem;
   margin: 0 auto;
 }
 
 .contact-intro {
   color: var(--color-text);
   line-height: 1.75;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .contact-success {
   color: var(--color-primary);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
 .contact-error {
   color: #b94a48;
-  margin-bottom: 16px;
-  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  font-size: var(--fs-sm);
 }
 
 .contact-optional {
@@ -35,19 +35,19 @@
 .contact-form .form-label {
   font-weight: 500;
   color: var(--color-text-heading);
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
 }
 
 .contact-form .form-control {
   border-color: var(--color-border);
   border-radius: 4px;
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
   color: var(--color-text-heading);
 }
 
 .contact-form .form-control:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(59, 110, 46, 0.15);
+  box-shadow: 0 0 0 3px rgba(250, 175, 65, 0.25);
 }
 
 /* ── Submit button ───────────────────────────────────────── */
@@ -56,7 +56,7 @@
   border: none !important;
   border-radius: 4px !important;
   font-weight: 700 !important;
-  padding: 10px 28px !important;
+  padding: 0.625rem 1.75rem !important;
   letter-spacing: 0.2px;
   color: var(--color-on-primary) !important;
   transition: background 0.15s !important;

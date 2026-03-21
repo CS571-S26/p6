@@ -1,8 +1,9 @@
 import { Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import ColoredHeading from '../components/ColoredHeading'
 import '../styles/BikeServiceRepair.css'
 
-import heroImg from '../assets/weLoveAllBikes.webp'
+import heroImg from '../assets/we-heart-all-bikes-centered (1).webp'
 
 const steps = [
   {
@@ -24,7 +25,7 @@ export default function BikeTradeIn() {
     <div className="obs-service-page">
       {/* Hero Banner */}
       <div className="obs-service-hero">
-        <img src={heroImg} alt="Bikes in the shop" className="obs-service-hero-img" />
+        <img src={heroImg} alt="Bikes in the shop" className="obs-service-hero-img" style={{ objectPosition: '37% 30%', transform: 'rotate(-1deg) scale(1.03)' }} />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">Bike Trade-In Program</h1>
           <p className="obs-service-hero-sub">Trade in and trade up today.</p>
@@ -38,7 +39,7 @@ export default function BikeTradeIn() {
         </p>
 
         {/* How It Works */}
-        <h2 className="obs-section-title mt-5">How It Works</h2>
+        <ColoredHeading text="How It Works" as="h2" className="mt-5" />
         <hr className="obs-section-divider" />
         <p className="obs-intro-text mb-5">
           Turning your current bike into credit towards a new model couldn&apos;t be easier. We have a straightforward process that ensures you receive fair market value and helps you avoid the hassle of listing your bike online. Visit us today to learn more.

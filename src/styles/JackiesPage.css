@@ -51,7 +51,7 @@
 /* Socials */
 .socials-text {
   color: var(--text-h);
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   font-weight: 500;
   margin-bottom: 0.75rem;
 }

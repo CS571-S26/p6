@@ -1,36 +1,41 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import '../styles/AboutUs.css'
-import '../styles/BikeServiceRepair.css'
-import heroImg from '../assets/picOfMerch.webp'
-import staffImg1 from '../assets/macAndKrysten.webp'
-import staffImg2 from '../assets/Oliver.webp'
-import staffImg3 from '../assets/Miranda&Jamie.webp'
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import ColoredHeading from "../components/ColoredHeading";
+import "../styles/AboutUs.css";
+import "../styles/BikeServiceRepair.css";
+import heroImg from "../assets/picOfMerch.webp";
+import staffImg1 from "../assets/macAndKrysten.webp";
+import staffImg2 from "../assets/Oliver.webp";
+import staffImg3 from "../assets/Miranda&Jamie.webp";
 
 const staff = [
   {
-    name: 'Mac & Krysten',
-    description: 'Short description about this team member and their role.',
+    name: "Mac & Krysten",
+    description: "Short description about this team member and their role.",
     image: staffImg1,
   },
   {
-    name: 'Oliver',
-    description: 'Short description about this team member and their role.',
+    name: "Oliver",
+    description: "Short description about this team member and their role.",
     image: staffImg2,
   },
   {
-    name: 'Miranda & Jamie',
-    description: 'Short description about this team member and their role.',
+    name: "Miranda & Jamie",
+    description: "Short description about this team member and their role.",
     image: staffImg3,
   },
-]
+];
 
 export default function AboutUs() {
   return (
     <>
       {/* Hero banner image */}
       <div className="obs-service-hero">
-        <img src={heroImg} alt="Oregon Bicycle Company merchandise" className="obs-service-hero-img" />
+        <img
+          src={heroImg}
+          alt="Oregon Bicycle Company merchandise"
+          className="obs-service-hero-img"
+        />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">About Us</h1>
           <p className="obs-service-hero-sub">Oregon&apos;s local bike shop.</p>
@@ -40,22 +45,29 @@ export default function AboutUs() {
       <Container className="py-5">
         {/* About Us section */}
         <section className="about-section text-center mb-5">
-          <h1>About Us</h1>
+          <ColoredHeading text="About Us" />
           <p className="about-description mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. We are Oregon&apos;s trusted local
-            bike shop, dedicated to serving cyclists of all levels with quality
-            bikes, expert service, and a passion for the ride.
+            Oregon Bike Company was built around a simple idea: a great local
+            bike shop should do more than sell bikes. It should be a place that
+            brings people together, supports the community, and helps more
+            people enjoy life on two wheels. We’re proud to call Oregon,
+            Wisconsin home, and we love being part of a community where biking
+            can mean so many different things. For some, it’s a weekend ride
+            with friends or family. For others, it’s a way to stay active,
+            explore new places, or simply enjoy a little more time outside. No
+            matter what riding looks like for you, we believe a bike shop should
+            feel welcoming, helpful, and rooted in the people it serves. That’s
+            what we aim to be at Oregon Bike Company — a local shop that values
+            connection, community, and good service just as much as the bikes
+            themselves.
           </p>
         </section>
 
         {/* Our Staff section */}
         <section className="staff-section text-center">
-          <h1>Our Staff</h1>
+          <ColoredHeading text="Our Staff" />
           <p className="staff-subtitle mb-4">
-            Meet our friendly staff, interested in joining?{' '}
+            Meet our friendly staff, interested in joining?{" "}
             <Button
               as={Link}
               to="/about/work-with-us"
@@ -91,5 +103,5 @@ export default function AboutUs() {
         </section>
       </Container>
     </>
-  )
+  );
 }

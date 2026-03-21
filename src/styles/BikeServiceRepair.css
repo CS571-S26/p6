@@ -3,7 +3,7 @@
   --shop-green:     var(--color-primary);
   --shop-green-dk:  var(--color-primary-dark);
   --shop-tan:       var(--color-bg-alt);
-  --shop-tan-dk:    #e8e8e8;
+  --shop-tan-dk:    #e6be6a;
   --shop-border:    var(--color-border);
   --shop-text:      var(--color-text-heading);
   --shop-text-lt:   var(--color-text-muted);
@@ -37,21 +37,21 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 48px;
+  padding: 2.5rem 3rem;
 }
 
 .obs-service-hero-title {
   color: #fff;
-  font-size: 2.75rem;
+  font-size: var(--fs-lg);
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .obs-service-hero-sub {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.125rem;
+  font-size: var(--fs-base);
   margin: 0;
   letter-spacing: 0.1px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -59,33 +59,33 @@
 
 @media (max-width: 768px) {
   .obs-service-hero           { height: 360px; }
-  .obs-service-hero-overlay   { padding: 24px 20px; }
-  .obs-service-hero-title     { font-size: 1.875rem; }
-  .obs-service-hero-sub       { font-size: 1rem; }
+  .obs-service-hero-overlay   { padding: 1.5rem 1.25rem; }
+  .obs-service-hero-title     { font-size: var(--fs-md); }
+  .obs-service-hero-sub       { font-size: var(--fs-sm); }
 }
 
 /* ── Section headings ────────────────────────────────────── */
 .obs-section-title {
-  font-size: 1.25rem;
+  font-size: var(--fs-md);
   font-weight: 700;
   color: var(--shop-text);
   letter-spacing: 0.1px;
-  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
 }
 
 .obs-section-divider {
-  width: 36px;
+  width: 2.25rem;
   height: 3px;
   background: var(--shop-green);
   border: none;
-  margin: 0 0 16px;
+  margin: 0 0 1rem;
   border-radius: 1px;
 }
 
 .obs-section-sub {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: var(--shop-text-lt);
-  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
 }
 
 /* ── Accordion ───────────────────────────────────────────── */
@@ -103,9 +103,9 @@
 .obs-accordion-item .accordion-button {
   background: transparent;
   box-shadow: none;
-  padding: 16px 0;
+  padding: 1rem 0;
   color: var(--shop-text);
-  font-size: 1.0625rem;
+  font-size: var(--fs-base);
   font-weight: 600;
   letter-spacing: 0.1px;
 }
@@ -127,16 +127,16 @@
 }
 
 .obs-accordion-price {
-  font-size: 1.0625rem;
+  font-size: var(--fs-base);
   font-weight: 700;
   color: var(--shop-green);
-  margin-right: 12px;
+  margin-right: 0.75rem;
   flex-shrink: 0;
 }
 
 .obs-accordion-body {
-  padding: 4px 0 24px !important;
-  font-size: 1rem;
+  padding: 0.25rem 0 1.5rem !important;
+  font-size: var(--fs-base);
   color: var(--shop-text-lt);
   line-height: 1.75;
   text-align: left;
@@ -149,14 +149,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
   text-align: left;
 }
 
 .obs-feature-list li {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   color: var(--shop-text-lt);
-  padding-left: 20px;
+  padding-left: 1.25rem;
   position: relative;
 }
 
@@ -165,14 +165,14 @@
   position: absolute;
   left: 0;
   color: var(--shop-green);
-  font-size: 12px;
+  font-size: var(--fs-sm);
   font-weight: 700;
-  top: 2px;
+  top: 0.125rem;
 }
 
 /* ── Note text ───────────────────────────────────────────── */
 .obs-note {
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
   color: var(--shop-text-lt);
   font-style: italic;
   margin: 0;
@@ -184,9 +184,9 @@
   background: var(--shop-green) !important;
   border: none !important;
   border-radius: 4px !important;
-  font-size: 0.9375rem !important;
+  font-size: var(--fs-sm) !important;
   font-weight: 700 !important;
-  padding: 10px 24px !important;
+  padding: 0.625rem 1.5rem !important;
   color: var(--color-on-primary) !important;
   letter-spacing: 0.2px;
   transition: background 0.15s !important;
@@ -204,9 +204,9 @@
   border: 1px solid var(--shop-border);
   border-top: 3px solid var(--shop-green);
   border-radius: 2px;
-  padding: 26px 24px;
+  padding: 1.625rem 1.5rem;
   position: sticky;
-  top: 80px;
+  top: 5rem;
   text-align: left;
 }
 
@@ -217,12 +217,12 @@
 .obs-rate-box {
   background: var(--shop-tan-dk);
   border-radius: 2px;
-  padding: 12px 14px;
-  margin-bottom: 20px;
+  padding: 0.75rem 0.875rem;
+  margin-bottom: 1.25rem;
 }
 
 .obs-rate-box p {
-  font-size: 14px;
+  font-size: var(--fs-sm);
   color: var(--shop-text-lt);
   margin: 0;
   line-height: 1.6;
@@ -233,12 +233,12 @@
 .obs-steps {
   display: flex;
   gap: 0;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 
 .obs-step {
   flex: 1;
-  padding: 32px 28px;
+  padding: 2rem 1.75rem;
   border-left: 1px solid var(--shop-border);
   text-align: left;
 }
@@ -248,15 +248,15 @@
 }
 
 .obs-step-number {
-  font-size: 52px;
+  font-size: var(--fs-lg);
   font-weight: 700;
   color: var(--shop-green);
   line-height: 1;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .obs-step-text {
-  font-size: 1.0625rem;
+  font-size: var(--fs-base);
   color: var(--shop-text-lt);
   line-height: 1.65;
   margin: 0;
@@ -270,7 +270,7 @@
     border-left: none;
     border-right: none !important;
     border-top: 1px solid var(--shop-border);
-    padding: 24px 0;
+    padding: 1.5rem 0;
   }
   .obs-step:last-child {
     border-bottom: 1px solid var(--shop-border);
@@ -280,14 +280,14 @@
 /* ── Trade-In CTA ────────────────────────────────────────── */
 .obs-tradein-cta {
   border-top: 1px solid var(--shop-border);
-  padding-top: 32px;
+  padding-top: 2rem;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 1.75rem;
 }
 
 .obs-tradein-cta p {
-  font-size: 1.0625rem;
+  font-size: var(--fs-base);
   color: var(--shop-text);
   margin: 0;
 }
@@ -302,7 +302,7 @@
 /* ── Content image ───────────────────────────────────────── */
 .obs-content-img {
   width: 100%;
-  height: 320px;
+  height: 20rem;
   object-fit: cover;
   border-radius: 4px;
   display: block;
@@ -310,7 +310,7 @@
 
 /* ── Intro text ──────────────────────────────────────────── */
 .obs-intro-text {
-  font-size: 1.0625rem;
+  font-size: var(--fs-base);
   color: var(--shop-text-lt);
   line-height: 1.8;
   text-align: left;
@@ -318,7 +318,7 @@
 
 /* ── Warranty box ────────────────────────────────────────── */
 .obs-warranty-box {
-  padding-top: 8px;
+  padding-top: 0.5rem;
 }
 
 /* ── Includes label (accordion body) ────────────────────── */
@@ -334,19 +334,19 @@
 
 /* ── Form utilities ──────────────────────────────────────── */
 .obs-form-container {
-  max-width: 640px;
+  max-width: 40rem;
 }
 
 .obs-form-success {
   color: var(--shop-green);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
 .obs-form-error {
   color: #b94a48;
-  margin-bottom: 16px;
-  font-size: 0.9375rem;
+  margin-bottom: 1rem;
+  font-size: var(--fs-sm);
 }
 
 .obs-form-optional {
@@ -356,18 +356,18 @@
 
 .obs-form-help {
   color: var(--shop-text-lt);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
 }
 
 /* ── A La Carte table ────────────────────────────────────── */
 .obs-alacarte-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9375rem;
+  font-size: var(--fs-sm);
 }
 
 .obs-alacarte-table td {
-  padding: 7px 0;
+  padding: 0.4375rem 0;
   border-bottom: 1px solid var(--shop-border);
   color: var(--shop-text);
   vertical-align: top;
@@ -378,5 +378,5 @@
   font-weight: 600;
   color: var(--shop-green);
   white-space: nowrap;
-  padding-left: 12px;
+  padding-left: 0.75rem;
 }

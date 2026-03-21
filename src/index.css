@@ -7,12 +7,12 @@
   /* -- Primary brand color -- */
   --color-primary:      #faaf41;   /* OBC yellow-orange: buttons, links, highlights */
   --color-primary-dark: #d4891a;   /* hover / active states                         */
-  --color-primary-bg:   #fef6e4;   /* subtle tinted backgrounds                     */
+  --color-primary-bg:   #FEF7EB;   /* subtle tinted backgrounds (secondary gold)     */
   --color-on-primary:   #111111;   /* text ON the primary color (yellow needs dark)  */
 
   /* -- Page backgrounds -- */
   --color-bg:           #ffffff;   /* main page background         */
-  --color-bg-alt:       #f4f4f4;   /* alternate section bg (light gray) */
+  --color-bg-alt:       #FEF7EB;   /* alternate section bg (secondary gold) */
 
   /* -- Font / text colors -- */
   --color-text:         #3a3a3a;   /* body copy                    */
@@ -29,6 +29,13 @@
   --color-footer-heading: #eeeeee;
   --color-footer-border:  rgba(255, 255, 255, 0.1);
   --color-footer-copy:    #777777;
+
+  /* -- Font sizes (4 tiers) -- */
+  --fs-xl:    2.75rem;    /* home page section headings        */
+  --fs-lg:    2rem;       /* hero titles, big section headings */
+  --fs-md:    1.25rem;    /* subheadings, section titles       */
+  --fs-base:  1rem;       /* body text, buttons, accordions    */
+  --fs-sm:    0.875rem;   /* captions, labels, small text      */
 
   /* -- Fonts -- */
   --font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -106,29 +113,16 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--fs-lg);
   letter-spacing: -0.02em;
   margin: 1.5rem 0;
-
-  @media (max-width: 1024px) {
-    font-size: 2.25rem;
-    margin: 1.25rem 0;
-  }
-
-  @media (max-width: 576px) {
-    font-size: 1.875rem;
-  }
 }
 
 h2 {
-  font-size: 1.625rem;
+  font-size: var(--fs-md);
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin: 0 0 0.5rem;
-
-  @media (max-width: 1024px) {
-    font-size: 1.375rem;
-  }
 }
 
 p {
@@ -139,9 +133,29 @@ p {
   flex: 1;
 }
 
+/* ── Colored headings (black + gold split) ──────────────── */
+.section-heading {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2.section-heading {
+  font-size: var(--fs-md);
+  letter-spacing: -0.01em;
+}
+
+.heading-dark {
+  color: var(--color-text-heading);
+}
+
+.heading-accent {
+  color: var(--color-primary);
+}
+
 code {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   line-height: 1.5;
   padding: 3px 7px;
   background: var(--code-bg);

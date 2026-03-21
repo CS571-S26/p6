@@ -11,14 +11,15 @@
 }
 
 .about-description {
-  max-width: 700px;
+  max-width: 900px;
   line-height: 1.8;
   color: var(--text);
+  font-size: var(--fs-md);
 }
 
 .staff-subtitle {
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: var(--fs-base);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,13 +60,13 @@
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
-  font-size: 1.1rem;
+  font-size: var(--fs-base);
   margin-bottom: 0.25rem;
 }
 
 .staff-desc {
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: var(--fs-sm);
 }
 
 @media (max-width: 1024px) {

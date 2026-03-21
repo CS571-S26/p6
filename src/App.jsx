@@ -15,11 +15,13 @@ import HoursLocation from './pages/HoursLocation'
 import ContactUs from './pages/ContactUs'
 import WorkWithUs from './pages/WorkWithUs'
 import JackiesPage from './pages/JackiesPage'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <NavBar />
       <main className="site-main">
         <Routes>

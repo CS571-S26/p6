@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { Container, Accordion, Button } from 'react-bootstrap'
+import ColoredHeading from '../components/ColoredHeading'
 import '../styles/BikeServiceRepair.css'
 
 import heroImg from '../assets/bikeFitting.webp'
@@ -43,7 +45,7 @@ export default function BikeFitting() {
     <div className="obs-service-page">
       {/* Hero Banner */}
       <div className="obs-service-hero">
-        <img src={heroImg} alt="Bike fitting session" className="obs-service-hero-img" style={{ objectPosition: 'center bottom' }} />
+        <img src={heroImg} alt="Bike fitting session" className="obs-service-hero-img" style={{ objectPosition: 'center 75%' }} />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">Bike Fitting</h1>
           <p className="obs-service-hero-sub">Improve your comfort &amp; performance.</p>
@@ -60,7 +62,7 @@ export default function BikeFitting() {
         </p>
 
         {/* Fit Options */}
-        <h2 className="obs-section-title">Bike Fit Options</h2>
+        <ColoredHeading text="Bike Fit Options" as="h2" />
         <hr className="obs-section-divider" />
         <p className="obs-section-sub">
           Whether you&apos;re on a brand new bike or looking to shave seconds off your next race, you can benefit from a professional bike fit.
@@ -83,7 +85,7 @@ export default function BikeFitting() {
                     <li key={f}>{f}</li>
                   ))}
                 </ul>
-                <Button className="obs-btn-shop">Come Visit Us</Button>
+                <Button as={Link} to="/about/hours" className="obs-btn-shop">Come Visit Us</Button>
               </Accordion.Body>
             </Accordion.Item>
           ))}

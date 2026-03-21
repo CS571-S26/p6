@@ -1,0 +1,32 @@
+/* ── GroupRides page ─────────────────────────────────────── */
+.group-rides-carousel-img {
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+
+.group-rides-intro {
+  max-width: 680px;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+.group-rides-btn {
+  border-color: var(--color-primary);
+  color: var(--color-text-heading);
+  font-weight: 600;
+}
+
+.group-rides-btn:hover,
+.group-rides-btn:focus {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@media (max-width: 767px) {
+  .group-rides-carousel-img {
+    max-height: 280px;
+  }
+}

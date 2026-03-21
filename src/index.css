@@ -1,33 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   THEME PALETTE  —  Edit these variables to restyle the site
+   ============================================================ */
 :root {
-  --text: #5a5248;
-  --text-h: #1e1a16;
-  --bg: #faf8f5;
-  --border: #ddd9d3;
-  --code-bg: #f0ece4;
-  --accent: #3b6e2e;
-  --accent-bg: #edf2ea;
-  --accent-border: rgba(59, 110, 46, 0.35);
-  --social-bg: rgba(237, 242, 234, 0.6);
+  /* -- Primary brand color -- */
+  --color-primary:      #faaf41;   /* OBC yellow-orange: buttons, links, highlights */
+  --color-primary-dark: #d4891a;   /* hover / active states                         */
+  --color-primary-bg:   #fef6e4;   /* subtle tinted backgrounds                     */
+  --color-on-primary:   #111111;   /* text ON the primary color (yellow needs dark)  */
+
+  /* -- Page backgrounds -- */
+  --color-bg:           #ffffff;   /* main page background         */
+  --color-bg-alt:       #f4f4f4;   /* alternate section bg (light gray) */
+
+  /* -- Font / text colors -- */
+  --color-text:         #3a3a3a;   /* body copy                    */
+  --color-text-heading: #111111;   /* headings                     */
+  --color-text-muted:   #6b6b6b;   /* captions, secondary text     */
+
+  /* -- Borders & dividers -- */
+  --color-border:       #e0e0e0;
+
+  /* -- Footer -- */
+  --color-footer-bg:      #111111;
+  --color-footer-text:    #cccccc;
+  --color-footer-muted:   #888888;
+  --color-footer-heading: #eeeeee;
+  --color-footer-border:  rgba(255, 255, 255, 0.1);
+  --color-footer-copy:    #777777;
+
+  /* -- Fonts -- */
+  --font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: var(--font-sans);
+  --font-mono:    ui-monospace, Consolas, monospace;
+
+  /* ── Legacy aliases (used by existing component CSS) ──────── */
+  --accent:          var(--color-primary);
+  --accent-dark:     var(--color-primary-dark);
+  --accent-bg:       var(--color-primary-bg);
+  --text:            var(--color-text);
+  --text-h:          var(--color-text-heading);
+  --bg:              var(--color-bg);
+  --border:          var(--color-border);
+  --white:           #fff;
+  --code-bg:         #f0f0f0;
+  --social-bg:       rgba(244, 244, 244, 0.8);
   --shadow:
-    rgba(0, 0, 0, 0.08) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
 
-  --white: #fff;
-  --footer-bg: #1e2b1a;
-  --footer-text: #9caa96;
-  --footer-text-muted: #6b7a65;
-  --footer-heading: #dde5da;
-  --footer-border: rgba(255, 255, 255, 0.08);
-  --footer-copy: #4b5a46;
+  /* footer legacy */
+  --footer-bg:          var(--color-footer-bg);
+  --footer-text:        var(--color-footer-text);
+  --footer-text-muted:  var(--color-footer-muted);
+  --footer-heading:     var(--color-footer-heading);
+  --footer-border:      var(--color-footer-border);
+  --footer-copy:        var(--color-footer-copy);
 
-  --sans: Georgia, 'Times New Roman', serif;
-  --heading: Georgia, 'Times New Roman', serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* heading legacy aliases */
+  --sans:    var(--font-sans);
+  --heading: var(--font-heading);
+  --mono:    var(--font-mono);
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
+  /* ── Base typography ───────────────────────────────────────── */
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+  color-scheme: light;
+  color: var(--color-text);
+  background: var(--color-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,26 +78,6 @@
 
   @media (max-width: 1024px) {
     font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #4a7fc1;
-    --accent-bg: rgba(74, 127, 193, 0.15);
-    --accent-border: rgba(74, 127, 193, 0.4);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
   }
 }
 
@@ -75,45 +98,55 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-text-heading);
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  margin: 1.5rem 0;
+
   @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 2.25rem;
+    margin: 1.25rem 0;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 1.875rem;
   }
 }
+
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
+  font-size: 1.625rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 1.375rem;
   }
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+.site-main {
+  flex: 1;
 }
 
 code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 3px 7px;
   background: var(--code-bg);
+  border-radius: 4px;
+  color: var(--color-text-heading);
+  display: inline-flex;
+  border-radius: 4px;
 }

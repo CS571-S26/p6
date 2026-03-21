@@ -5,40 +5,35 @@ import heroImg from '../assets/bikeFitting.webp'
 
 const fittings = [
   {
-    name: 'Basic Fit',
-    price: '$XX',
-    description:
-      'A great starting point for new riders or anyone looking to improve comfort on their current setup. We assess saddle height, fore-aft position, and handlebar reach.',
+    name: 'Standard Fit',
+    price: '$',
     features: [
-      'Saddle height & fore-aft adjustment',
-      'Handlebar height & reach',
-      'Cleat alignment (if applicable)',
-      'Ride-away adjustments included',
+      'Personal interview',
+      'Adjust seat height',
+      'Adjust fore/aft seat position',
+      'Adjust handlebar reach',
+      'Adjust handlebar height',
     ],
   },
   {
-    name: 'Performance Fit',
-    price: '$XX',
-    description:
-      'A comprehensive fit for road, gravel, or mountain riders who want to maximize efficiency and power output without sacrificing comfort.',
+    name: 'Advanced Fit',
+    price: '$$',
+    note: 'Standard Fit, plus:',
     features: [
-      'Full body measurement & flexibility assessment',
-      'Saddle, stem, and handlebar optimization',
-      'Cleat setup & knee tracking analysis',
-      'Video analysis of pedal stroke',
-      'Written fit report to take home',
+      'Flexibility assessment',
+      'Measure and adjust handlebar width',
+      'Pedal/cleat alignment',
+      'Printed copy of bike measurements',
     ],
   },
   {
-    name: 'Follow-Up Fit',
-    price: '$XX',
-    description:
-      'Already had a fit with us? This session covers adjustments after a bike change, injury recovery, or significant changes in flexibility or fitness.',
+    name: 'Dynamic Fit',
+    price: '$$$',
+    note: 'Advanced Fit, plus:',
     features: [
-      'Review of previous fit notes',
-      'Position re-assessment',
-      'Fine-tuning of existing setup',
-      'Updated fit report',
+      'Video analysis of dynamic cycling position',
+      'Adjustment of all measurements based on video analysis',
+      'Aerobar setup (optional)',
     ],
   },
 ]
@@ -51,15 +46,25 @@ export default function BikeFitting() {
         <img src={heroImg} alt="Bike fitting session" className="obs-service-hero-img" />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">Bike Fitting</h1>
-          <p className="obs-service-hero-sub">Ride farther, feel better. A proper fit makes all the difference.</p>
+          <p className="obs-service-hero-sub">Improve your comfort &amp; performance.</p>
         </div>
       </div>
 
-      {/* Page Content */}
       <Container fluid="xl" className="py-5">
-        <h2 className="obs-section-title">Fit Packages</h2>
+        {/* Intro */}
+        <p className="obs-intro-text mb-2">
+          Regardless of what type of cycling you enjoy, you&apos;ll benefit from a bike that has been properly adjusted to fit your body and your riding style. Our certified fit specialists will discuss your cycling history and goals, then work with you to determine your ideal riding position.
+        </p>
+        <p className="obs-intro-text mb-5">
+          With a professional bike fit, you can be more comfortable, more efficient, and more powerful on every ride. You&apos;ll also be less likely to sustain injuries on a bike that has been expertly configured to meet your needs.
+        </p>
+
+        {/* Fit Options */}
+        <h2 className="obs-section-title">Bike Fit Options</h2>
         <hr className="obs-section-divider" />
-        <p className="obs-section-sub">Click any package to see what&apos;s included.</p>
+        <p className="obs-section-sub">
+          Whether you&apos;re on a brand new bike or looking to shave seconds off your next race, you can benefit from a professional bike fit.
+        </p>
         <Accordion flush>
           {fittings.map((fit, idx) => (
             <Accordion.Item eventKey={String(idx)} key={fit.name} className="obs-accordion-item">
@@ -68,7 +73,11 @@ export default function BikeFitting() {
                 <span className="obs-accordion-price">{fit.price}</span>
               </Accordion.Header>
               <Accordion.Body className="obs-accordion-body">
-                <p className="mb-3">{fit.description}</p>
+                {fit.note && (
+                  <p className="obs-includes-label mb-2">
+                    {fit.note}
+                  </p>
+                )}
                 <ul className="obs-feature-list mb-4">
                   {fit.features.map((f) => (
                     <li key={f}>{f}</li>

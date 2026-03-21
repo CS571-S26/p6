@@ -57,7 +57,7 @@
 }
 
 .instagram-link {
-  color: var(--accent);
+  color: var(--color-text-heading);
   transition: color 0.2s ease, transform 0.2s ease;
   display: inline-block;
 }

@@ -9,7 +9,7 @@
   width: 44px;
   height: 44px;
   background: var(--accent);
-  color: var(--white);
+  color: var(--color-on-primary);
   border-radius: 4px;
   display: flex;
   align-items: center;

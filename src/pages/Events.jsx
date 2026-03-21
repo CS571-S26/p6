@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import rawCSV from '../data/events.csv?raw'
+import '../styles/Events.css'
 
 function parseCSV(raw) {
   const [headerLine, ...lines] = raw.trim().split('\n')
@@ -23,11 +24,19 @@ function parseCSV(raw) {
   })
 }
 
-const events = parseCSV(rawCSV)
-
-const bgColors = ['#ede8df', '#e6ede3']
-
 export default function Events() {
+  const [events, setEvents] = useState([])
+
+  useEffect(() => {
+    fetch(import.meta.env.BASE_URL + 'events.csv')
+      .then(res => {
+        if (!res.ok) throw new Error(`Could not load events.csv (${res.status})`)
+        return res.text()
+      })
+      .then(text => setEvents(parseCSV(text)))
+      .catch(err => console.error('Events load error:', err))
+  }, [])
+
   return (
     <Container className="py-5">
       <h1 className="mb-5">All Events</h1>
@@ -38,23 +47,21 @@ export default function Events() {
             <img
               src={event.image}
               alt={event.title}
-              className="w-100 h-100"
-              style={{ objectFit: 'cover', display: 'block', minHeight: '220px' }}
+              className="events-card-img"
             />
           </Col>
         )
         const infoCol = (
-          <Col xs={12} md={8} className="p-4 d-flex flex-column justify-content-center">
-            <h2>{event.title}</h2>
-            <p className="text-muted mb-2">{event.date} &bull; {event.time}</p>
-            <p className="mb-0">{event.blurb}</p>
+          <Col xs={12} md={8} className="events-card-body">
+            <h2 className="events-card-title">{event.title}</h2>
+            <p className="events-card-meta">{event.date} &bull; {event.time}</p>
+            <p className="events-card-blurb">{event.blurb}</p>
           </Col>
         )
         return (
           <Row
             key={i}
-            className="mb-4 overflow-hidden align-items-stretch"
-            style={{ borderRadius: '4px', background: bgColors[i % 2], border: '1px solid #d4cfc8' }}
+            className={`mb-4 overflow-hidden align-items-stretch events-card${i % 2 !== 0 ? ' events-card-alt' : ''}`}
           >
             {flipped ? <>{infoCol}{imageCol}</> : <>{imageCol}{infoCol}</>}
           </Row>

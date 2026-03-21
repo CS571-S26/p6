@@ -29,7 +29,8 @@ const footerSections = [
   {
     title: 'Events',
     links: [
-      { label: 'Events', to: '/events' },
+      { label: 'All Events', to: '/events' },
+      { label: 'Group Rides', to: '/events/group-rides' },
     ],
   },
   {

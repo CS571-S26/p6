@@ -4,19 +4,11 @@
   margin-left: calc(50% - 50vw);
 }
 
-/* Logo mark */
-.obs-logo-mark {
-  width: 44px;
+/* Logo image */
+.obs-logo-img {
   height: 44px;
-  background: var(--accent);
-  color: var(--color-on-primary);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.5px;
+  width: auto;
+  object-fit: contain;
   flex-shrink: 0;
 }
 

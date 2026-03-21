@@ -1,6 +1,7 @@
 .hero-section {
   background: var(--accent-bg);
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .hero-img {
@@ -29,15 +30,24 @@
 
 .shop-banner {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 0 0.5rem;
   overflow: hidden;
 }
 
 .shop-banner-img {
   width: 100%;
+  height: 500px;
   display: block;
   object-fit: cover;
-  min-height: 300px;
+  object-position: center 75%;
+}
+
+@media (max-width: 768px) {
+  .shop-banner-img {
+    height: 360px;
+  }
 }
 
 .shop-banner-btn {
@@ -54,6 +64,8 @@
 
 /* Services grid */
 .services-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -72,11 +84,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-card-img {
-  transform: scale(1.05);
 }
 
 .service-card-overlay {

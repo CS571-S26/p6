@@ -1,27 +1,27 @@
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/AboutUs.css'
+import '../styles/BikeServiceRepair.css'
+import heroImg from '../assets/picOfMerch.webp'
+import staffImg1 from '../assets/macAndKrysten.webp'
+import staffImg2 from '../assets/Oliver.webp'
+import staffImg3 from '../assets/Miranda&Jamie.webp'
 
 const staff = [
   {
-    name: 'Staff Member 1',
+    name: 'Mac & Krysten',
     description: 'Short description about this team member and their role.',
-    image: 'https://placehold.co/300x300?text=Photo',
+    image: staffImg1,
   },
   {
-    name: 'Staff Member 2',
+    name: 'Oliver',
     description: 'Short description about this team member and their role.',
-    image: 'https://placehold.co/300x300?text=Photo',
+    image: staffImg2,
   },
   {
-    name: 'Staff Member 3',
+    name: 'Miranda & Jamie',
     description: 'Short description about this team member and their role.',
-    image: 'https://placehold.co/300x300?text=Photo',
-  },
-  {
-    name: 'Staff Member 4',
-    description: 'Short description about this team member and their role.',
-    image: 'https://placehold.co/300x300?text=Photo',
+    image: staffImg3,
   },
 ]
 
@@ -29,12 +29,12 @@ export default function AboutUs() {
   return (
     <>
       {/* Hero banner image */}
-      <div className="about-hero">
-        <img
-          src="https://placehold.co/1200x400?text=About+Us+Banner"
-          alt="About Us banner"
-          className="about-hero-img"
-        />
+      <div className="obs-service-hero">
+        <img src={heroImg} alt="Oregon Bicycle Company merchandise" className="obs-service-hero-img" />
+        <div className="obs-service-hero-overlay">
+          <h1 className="obs-service-hero-title">About Us</h1>
+          <p className="obs-service-hero-sub">Oregon&apos;s local bike shop.</p>
+        </div>
       </div>
 
       <Container className="py-5">
@@ -68,7 +68,7 @@ export default function AboutUs() {
 
           <Row className="g-4 justify-content-center">
             {staff.map((member, i) => (
-              <Col key={i} xs={12} sm={6} md={4} lg={3}>
+              <Col key={i} xs={12} sm={6} md={4}>
                 <Card className="staff-card h-100 border-0">
                   <Card.Img
                     variant="top"

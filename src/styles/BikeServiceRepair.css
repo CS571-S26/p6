@@ -16,7 +16,7 @@
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: 340px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 768px) {
-  .obs-service-hero           { height: 240px; }
+  .obs-service-hero           { height: 360px; }
   .obs-service-hero-overlay   { padding: 24px 20px; }
   .obs-service-hero-title     { font-size: 1.875rem; }
   .obs-service-hero-sub       { font-size: 1rem; }

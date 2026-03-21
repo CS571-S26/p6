@@ -43,7 +43,7 @@ export default function BikeFitting() {
     <div className="obs-service-page">
       {/* Hero Banner */}
       <div className="obs-service-hero">
-        <img src={heroImg} alt="Bike fitting session" className="obs-service-hero-img" />
+        <img src={heroImg} alt="Bike fitting session" className="obs-service-hero-img" style={{ objectPosition: 'center bottom' }} />
         <div className="obs-service-hero-overlay">
           <h1 className="obs-service-hero-title">Bike Fitting</h1>
           <p className="obs-service-hero-sub">Improve your comfort &amp; performance.</p>

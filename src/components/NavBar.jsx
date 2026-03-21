@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'
 import '../styles/NavBar.css'
+import logo from '../assets/OBC_logo_black_no_shadows_all_black.png'
 
 function Logo() {
   return (
     <Navbar.Brand as={Link} to="/" aria-label="Oregon Bike Shop home">
-      <div className="obs-logo-mark">OBS</div>
+      <img src={logo} alt="Oregon Bicycle Company" className="obs-logo-img" />
     </Navbar.Brand>
   )
 }

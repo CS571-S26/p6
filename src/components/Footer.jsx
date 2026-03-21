@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../styles/Footer.css'
+import logo from '../assets/OBC_logo_black_no_shadows_all_black.png'
 
 function Logo() {
   return (
     <Link to="/" className="obs-footer-logo d-flex align-items-center gap-2 text-decoration-none mb-3">
-      <div className="obs-logo-mark">OBS</div>
+      <img src={logo} alt="Oregon Bicycle Company" className="obs-footer-logo-img" />
     </Link>
   )
 }

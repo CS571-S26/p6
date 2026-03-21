@@ -1,6 +1,8 @@
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/HoursLocation.css'
+import '../styles/BikeServiceRepair.css'
+import heroImg from '../assets/fullBuildingOutside.webp'
 
 const hours = [
   { day: 'Monday', time: '9:00 AM – 6:00 PM' },
@@ -19,12 +21,12 @@ export default function HoursLocation() {
   return (
     <>
       {/* Hero banner image */}
-      <div className="about-hero">
-        <img
-          src="https://placehold.co/1200x400?text=Hours+%26+Location+Banner"
-          alt="Hours and Location banner"
-          className="about-hero-img"
-        />
+      <div className="obs-service-hero">
+        <img src={heroImg} alt="Oregon Bicycle Company building" className="obs-service-hero-img" />
+        <div className="obs-service-hero-overlay">
+          <h1 className="obs-service-hero-title">Hours &amp; Location</h1>
+          <p className="obs-service-hero-sub">Come visit us in Oregon, Wisconsin.</p>
+        </div>
       </div>
 
       <Container className="py-5">

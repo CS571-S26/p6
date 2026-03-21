@@ -110,6 +110,8 @@ export default function Home() {
         </Row>
       </div>
 
+      <h1 className="text-center my-5">More than a Bike Shop</h1>
+
       {/* Events section */}
       <div className="events-section">
         <Row className="align-items-center g-4">

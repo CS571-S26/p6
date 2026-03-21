@@ -7,17 +7,10 @@
   margin-left: calc(50% - 50vw);
 }
 
-.obs-logo-mark {
-  width: 44px;
-  height: 44px;
-  background: var(--white);
-  color: var(--accent);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 13px;
+.obs-footer-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
   letter-spacing: 0.5px;
   flex-shrink: 0;
 }

@@ -1,11 +1,12 @@
 import { Container, Carousel, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import groupRideImg from '../assets/bikeGroupWithHandsInAir.webp'
 
 const images = [
-  { src: 'https://picsum.photos/seed/groupride1/1200/500', alt: 'Riders on a forest road' },
-  { src: 'https://picsum.photos/seed/groupride2/1200/500', alt: 'Morning group ride on gravel' },
-  { src: 'https://picsum.photos/seed/groupride3/1200/500', alt: 'Evening ride through the hills' },
-  { src: 'https://picsum.photos/seed/groupride4/1200/500', alt: 'Pack riding on a country road' },
+  { src: groupRideImg, alt: 'Riders on a forest road' },
+  { src: groupRideImg, alt: 'Morning group ride on gravel' },
+  { src: groupRideImg, alt: 'Evening ride through the hills' },
+  { src: groupRideImg, alt: 'Pack riding on a country road' },
 ]
 
 export default function GroupRides() {

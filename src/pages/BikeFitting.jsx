@@ -1,8 +1,7 @@
 import { Container, Accordion, Button } from 'react-bootstrap'
 import '../styles/BikeServiceRepair.css'
 
-// TODO: replace with a real bike fitting photo
-import heroImg from '../assets/hero.png'
+import heroImg from '../assets/bikeFitting.webp'
 
 const fittings = [
   {

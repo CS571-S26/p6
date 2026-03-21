@@ -1,8 +1,7 @@
 import { Container, Row, Col, Accordion, Button } from 'react-bootstrap'
 import '../styles/BikeServiceRepair.css'
 
-// TODO: replace with a real bike shop/workshop photo
-import heroImg from '../assets/hero.png'
+import heroImg from '../assets/zoomedOutService.webp'
 
 const tuneUps = [
   {

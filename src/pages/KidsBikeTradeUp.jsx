@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import heroImg from '../assets/kidTradeUp.webp'
 
 const steps = [
   {
@@ -49,7 +50,7 @@ export default function KidsBikeTradeUp() {
       {/* Hero */}
       <div style={{ position: 'relative', maxHeight: '420px', overflow: 'hidden' }}>
         <img
-          src="https://picsum.photos/seed/kidstradeup/1400/420"
+          src={heroImg}
           alt="Kids on bikes"
           style={{ width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
         />

@@ -1,6 +1,16 @@
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
+import heroImg from '../assets/justLogoOutsideBuilding.webp'
+import shopBikesImg from '../assets/fullInterior.webp'
+import serviceRepairImg from '../assets/closeUpService.webp'
+import bikeFittingImg from '../assets/bikeFitting.webp'
+import tradeInImg from '../assets/weLoveAllBikes.webp'
+import kidsTradeUpImg from '../assets/kidTradeUp.webp'
+import eventsImg from '../assets/bikeGroupWithHandsInAir.webp'
+import bodihow1Img from '../assets/HopsWithBodiWall.webp'
+import bodihow2Img from '../assets/VibrantBeer.webp'
+import bodihow3Img from '../assets/Carne Asada Bowl.webp'
 
 export default function Home() {
   return (
@@ -10,7 +20,7 @@ export default function Home() {
         <Row className="align-items-center g-0">
           <Col xs={12} md={6}>
             <img
-              src="https://placehold.co/600x400?text=Hero+Image"
+              src={heroImg}
               alt="Oregon Bicycle Company"
               className="hero-img"
             />
@@ -57,7 +67,7 @@ export default function Home() {
       {/* Shop Bikes banner */}
       <div className="shop-banner">
         <img
-          src="https://placehold.co/1200x450?text=Shop+Bikes+Banner"
+          src={shopBikesImg}
           alt="Shop Bikes"
           className="shop-banner-img"
         />
@@ -77,15 +87,15 @@ export default function Home() {
         <h1 className="text-center mb-4">Services</h1>
         <Row className="g-2 mx-0">
           {[
-            { title: 'Bike Service & Repair', desc: 'Expert repair and tune-ups', to: '/services/repair' },
-            { title: 'Bike Fitting', desc: 'Custom fit for comfort', to: '/services/fitting' },
-            { title: 'Bike Trade-In', desc: 'Trade up your old bike', to: '/services/trade-in' },
-            { title: "Kids Bike Trade-Up", desc: 'They grow, bikes grow too', to: '/services/kids-trade-up' },
+            { title: 'Bike Service & Repair', desc: 'Expert repair and tune-ups', to: '/services/repair', img: serviceRepairImg },
+            { title: 'Bike Fitting', desc: 'Custom fit for comfort', to: '/services/fitting', img: bikeFittingImg },
+            { title: 'Bike Trade-In', desc: 'Trade up your old bike', to: '/services/trade-in', img: tradeInImg },
+            { title: "Kids Bike Trade-Up", desc: 'They grow, bikes grow too', to: '/services/kids-trade-up', img: kidsTradeUpImg },
           ].map((svc, i) => (
             <Col key={i} xs={12} sm={6}>
               <Link to={svc.to} className="service-card">
                 <img
-                  src={`https://placehold.co/600x350?text=${encodeURIComponent(svc.title)}`}
+                  src={svc.img}
                   alt={svc.title}
                   className="service-card-img"
                 />
@@ -124,7 +134,7 @@ export default function Home() {
           </Col>
           <Col xs={12} md={6}>
             <img
-              src="https://placehold.co/600x400?text=Events+Image"
+              src={eventsImg}
               alt="OBC Events"
               className="events-img"
             />
@@ -186,21 +196,21 @@ export default function Home() {
             <Carousel className="bodihow-carousel">
               <Carousel.Item>
                 <img
-                  src="https://placehold.co/600x400?text=Bodihow+1"
+                  src={bodihow1Img}
                   alt="Bodihow Brewing 1"
                   className="d-block w-100 bodihow-carousel-img"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  src="https://placehold.co/600x400?text=Bodihow+2"
+                  src={bodihow2Img}
                   alt="Bodihow Brewing 2"
                   className="d-block w-100 bodihow-carousel-img"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  src="https://placehold.co/600x400?text=Bodihow+3"
+                  src={bodihow3Img}
                   alt="Bodihow Brewing 3"
                   className="d-block w-100 bodihow-carousel-img"
                 />

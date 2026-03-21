@@ -1,0 +1,30 @@
+/* ── WorkWithUs page ─────────────────────────────────────── */
+
+/* ── WorkWithUs page ─────────────────────────────────────── */
+.wwu-form-container {
+  text-align: left;
+}
+
+.wwu-form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form controls */
+.wwu-form .form-label {
+  font-weight: 500;
+  color: var(--color-text-heading);
+  font-size: 0.9375rem;
+}
+
+.wwu-form .form-control {
+  border-color: var(--color-border);
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  color: var(--color-text-heading);
+}
+
+.wwu-form .form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(59, 110, 46, 0.15);
+}

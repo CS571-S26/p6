@@ -59,14 +59,15 @@
 
 /* Contact button */
 .contact-btn {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--color-primary);
+  color: var(--color-text-heading);
+  font-weight: 600;
 }
 
 .contact-btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--white);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
 }
 
 @media (max-width: 1024px) {

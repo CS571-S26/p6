@@ -1,113 +1,85 @@
-import { Fragment } from 'react'
-import { Container, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import '../styles/BikeServiceRepair.css'
+
 import heroImg from '../assets/kidTradeUp.webp'
+import whyImg from '../assets/bikeGroupWithHandsInAir.webp'
 
 const steps = [
   {
     number: '1',
-    title: 'Bring the Old Bike',
-    description: 'Drop off your child\'s current bike — any brand, any size. We\'ll check it over and make sure it\'s safe to pass along.',
+    text: 'Bring in your child\'s current bike for a fast and easy evaluation.',
   },
   {
     number: '2',
-    title: 'Pick the Right Size',
-    description: 'Our staff will fit your kid for the next size up, so they\'re comfortable and confident right away.',
+    text: 'Shop for the next size up while we assess your trade-in.',
   },
   {
     number: '3',
-    title: 'Trade Up & Ride',
-    description: 'Apply your trade-in credit to a new bike and head outside. Kids grow fast — we make it easy to keep up.',
+    text: 'Apply up to 50% of the original price as credit and ride!',
   },
 ]
 
-function BikeIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 32"
-      fill="none"
-      stroke="var(--accent)"
-      strokeWidth="2.2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      style={{ width: '56px', flexShrink: 0 }}
-    >
-      <circle cx="10" cy="22" r="8" />
-      <circle cx="54" cy="22" r="8" />
-      <path d="M10 22 L22 6 L36 6" />
-      <path d="M36 6 L42 22 L10 22" />
-      <path d="M36 6 L54 22" />
-      <path d="M30 6 L32 2 L38 2" />
-    </svg>
-  )
-}
-
 export default function KidsBikeTradeUp() {
   return (
-    <>
-      {/* Hero */}
-      <div style={{ position: 'relative', maxHeight: '420px', overflow: 'hidden' }}>
-        <img
-          src={heroImg}
-          alt="Kids on bikes"
-          style={{ width: '100%', height: '420px', objectFit: 'cover', display: 'block' }}
-        />
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'rgba(0,0,0,0.42)',
-          display: 'flex', alignItems: 'center',
-        }}>
-          <Container>
-            <h1 style={{ color: '#fff', margin: 0 }}>Kids&apos; Bike Trade Up</h1>
-            <p style={{ color: 'rgba(255,255,255,0.85)', marginTop: '12px', maxWidth: '520px', fontSize: '18px' }}>
-              Kids outgrow bikes fast. Bring in the old one and we&apos;ll set them up with the right size for where they&apos;re headed next.
-            </p>
-          </Container>
+    <div className="obs-service-page">
+      {/* Hero Banner */}
+      <div className="obs-service-hero">
+        <img src={heroImg} alt="Kids on bikes" className="obs-service-hero-img" />
+        <div className="obs-service-hero-overlay">
+          <h1 className="obs-service-hero-title">Kids&apos; Bike Trade-Up</h1>
+          <p className="obs-service-hero-sub">Kids grow fast. We&apos;re here to help.</p>
         </div>
       </div>
 
-      {/* Steps */}
-      <Container className="py-5">
-        <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-center gap-3 gap-md-0">
-          {steps.map((step, i) => (
-            <Fragment key={step.number}>
-              <div style={{ maxWidth: '220px', textAlign: 'center', padding: '0 16px' }}>
-                <div style={{
-                  fontSize: '48px',
-                  fontWeight: '700',
-                  lineHeight: 1,
-                  color: 'var(--accent)',
-                  fontFamily: 'Georgia, serif',
-                  marginBottom: '12px',
-                }}>
-                  {step.number}
-                </div>
-                <h2 style={{ fontSize: '18px', marginBottom: '8px' }}>{step.title}</h2>
-                <p style={{ fontSize: '15px', color: 'var(--text)' }}>{step.description}</p>
-              </div>
-              {i < steps.length - 1 && (
-                <div
-                  className="d-flex align-items-center justify-content-center"
-                  style={{ padding: '0 8px' }}
-                >
-                  <BikeIcon />
-                </div>
-              )}
-            </Fragment>
+      <Container fluid="xl" className="py-5">
+        {/* Intro */}
+        <p className="obs-intro-text mb-5">
+          Thanks to our Kids&apos; Bike Trade-Up Program, your child can ride a high quality bike that fits well despite those unexpected growth spurts. When your little cyclist is ready for the next bike size, we&apos;ll give you up to <strong>50% of your original bike purchase</strong> as a credit towards a bigger kids&apos; bike.
+        </p>
+
+        {/* Why Choose Us */}
+        <Row className="align-items-center gx-5 mb-5 pb-5 obs-section-row-divided">
+          <Col md={6} className="mb-4 mb-md-0">
+            <img
+              src={whyImg}
+              alt="Family enjoying a bike ride"
+              className="obs-content-img"
+            />
+          </Col>
+          <Col md={6}>
+            <h2 className="obs-section-title">Why Choose Our Bike Shop?</h2>
+            <hr className="obs-section-divider" />
+            <p className="obs-intro-text">
+              The kids&apos; bikes we carry are designed with the same level of detail that goes into our adult bikes. They feature lightweight frames and durable components, making them fun and safe for your child. We also have a sweet selection of sizes and colors — all fine-tuned by professional mechanics and ready for you.
+            </p>
+          </Col>
+        </Row>
+
+        {/* How It Works */}
+        <h2 className="obs-section-title mt-2">How Does Trading Up Work?</h2>
+        <hr className="obs-section-divider" />
+        <p className="obs-intro-text mb-4">
+          Our Kids&apos; Bike Trade-Up Program is simple — invest in a quality bike today, and bring it back to us when your child is ready for the next size. This program is valid until your child is ready for an adult bike!
+        </p>
+
+        <div className="obs-steps mb-5">
+          {steps.map((step) => (
+            <div key={step.number} className="obs-step">
+              <div className="obs-step-number">{step.number}</div>
+              <p className="obs-step-text">{step.text}</p>
+            </div>
           ))}
         </div>
 
-        <div className="mt-5 pt-3 text-center" style={{ borderTop: '1px solid var(--border)' }}>
-          <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-            Come in to see how we can help you.
-          </p>
-          <Button as={Link} to="/about/hours" variant="outline-secondary">
-            Hours &amp; Location
+        {/* CTA */}
+        <div className="obs-tradein-cta">
+          <p>Come in and ask us about the Kids&apos; Bike Trade-Up Program today.</p>
+          <Button as={Link} to="/about/contact" className="obs-btn-shop">
+            Contact Us
           </Button>
         </div>
       </Container>
-    </>
+    </div>
   )
 }

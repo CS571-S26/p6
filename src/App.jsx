@@ -21,7 +21,7 @@ function App() {
   return (
     <HashRouter>
       <NavBar />
-      <main style={{ flex: 1 }}>
+      <main className="site-main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<ShopBikes />} />

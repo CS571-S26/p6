@@ -1,16 +1,42 @@
 import { useState } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import '../styles/BikeServiceRepair.css'
+import '../styles/WorkWithUs.css'
 
-// TODO: replace with a real shop/team photo
-import heroImg from '../assets/hero.png'
+import heroImg from '../assets/workWithUs.webp'
+
+const API = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 
 export default function WorkWithUs() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    setSubmitted(true)
+    setError('')
+    setLoading(true)
+    const fd = new FormData(e.target)
+    try {
+      const res = await fetch(`${API}/api/apply`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fd.get('name'),
+          email: fd.get('email'),
+          phone: fd.get('phone'),
+          resumeLink: fd.get('resumeLink'),
+          coverLetter: fd.get('coverLetter'),
+        }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || 'Something went wrong.')
+      setSubmitted(true)
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -24,74 +50,73 @@ export default function WorkWithUs() {
         </div>
       </div>
 
-      <Container fluid="xl" className="py-5" style={{ maxWidth: '640px' }}>
+      <Container fluid="xl" className="py-5 wwu-form-container">
         {/* Intro text */}
         <h2 className="obs-section-title">We&apos;re Hiring</h2>
         <hr className="obs-section-divider" />
-        <p className="obs-section-sub" style={{ marginBottom: '12px' }}>
+        <p className="obs-section-sub mb-3">
           Oregon Bike Shop is a small, community-focused shop in Oregon, WI. We care about bikes, our neighbors, and doing good work. If that sounds like you, we&apos;d love to hear from you.
         </p>
-        <p className="obs-section-sub" style={{ marginBottom: '32px' }}>
+        <p className="obs-section-sub mb-5">
           We hire for mechanical, sales, and events roles throughout the year. Even if we don&apos;t have an opening right now, send us your info and we&apos;ll keep you in mind.
         </p>
 
         {/* Application Form */}
-        {submitted ? (
-          <p style={{ color: '#3b6e2a', fontWeight: 600, fontSize: '16px' }}>
-            Thanks for applying! We&apos;ll review your application and reach out if there&apos;s a good fit.
-          </p>
-        ) : (
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Your name" required />
-            </Form.Group>
+        <div className="wwu-form-wrap">
+          {submitted ? (
+            <p className="obs-form-success">
+              Thanks for applying! We&apos;ll review your application and reach out if there&apos;s a good fit.
+            </p>
+          ) : (
+            <Form onSubmit={handleSubmit} className="wwu-form">
+              <Form.Group className="mb-3">
+                <Form.Label>Name</Form.Label>
+                <Form.Control name="name" type="text" placeholder="Your name" required />
+              </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="your@email.com" required />
-            </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Email</Form.Label>
+                <Form.Control name="email" type="email" placeholder="your@email.com" required />
+              </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>
-                Phone <span style={{ fontWeight: 400, color: '#6b5f52' }}>(optional)</span>
-              </Form.Label>
-              <Form.Control type="tel" placeholder="(608) 555-0100" />
-            </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>
+                  Phone <span className="obs-form-optional">(optional)</span>
+                </Form.Label>
+                <Form.Control name="phone" type="tel" placeholder="(608) 555-0100" />
+              </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Resume Link</Form.Label>
-              <Form.Control type="url" placeholder="https://linkedin.com/in/yourname" required />
-              <Form.Text style={{ color: '#6b5f52' }}>
-                Link to a LinkedIn profile, Google Doc, or any publicly accessible resume.
-              </Form.Text>
-            </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Resume Link</Form.Label>
+                <Form.Control name="resumeLink" type="url" placeholder="https://linkedin.com/in/yourname" required />
+                <Form.Text className="obs-form-help">
+                  Link to a LinkedIn profile, Google Doc, or any publicly accessible resume.
+                </Form.Text>
+              </Form.Group>
 
-            <Form.Group className="mb-4">
-              <Form.Label>Cover Letter</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={7}
-                placeholder="Tell us a bit about yourself, your experience with bikes, and why you'd like to join the team."
-                required
-              />
-            </Form.Group>
+              <Form.Group className="mb-4">
+                <Form.Label>Cover Letter</Form.Label>
+                <Form.Control
+                  name="coverLetter"
+                  as="textarea"
+                  rows={7}
+                  placeholder="Tell us a bit about yourself, your experience with bikes, and why you'd like to join the team."
+                  required
+                />
+              </Form.Group>
 
-            <Button
-              type="submit"
-              style={{
-                background: '#3b6e2a',
-                border: 'none',
-                borderRadius: '3px',
-                fontWeight: 600,
-                padding: '10px 28px',
-                letterSpacing: '0.3px',
-              }}
-            >
-              Submit Application
-            </Button>
-          </Form>
-        )}
+              {error && (
+                <p className="obs-form-error">{error}</p>
+              )}
+
+              <div className="text-center">
+                <Button type="submit" disabled={loading} className="obs-btn-shop">
+                  {loading ? 'Submitting…' : 'Submit Application'}
+                </Button>
+              </div>
+            </Form>
+          )}
+        </div>
       </Container>
     </div>
   )

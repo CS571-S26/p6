@@ -10,6 +10,7 @@ import eventsImg from "../assets/bikeGroupWithHandsInAir.webp";
 import bodihow1Img from "../assets/HopsWithBodiWall.webp";
 import bodihow2Img from "../assets/VibrantBeer.webp";
 import bodihow3Img from "../assets/Carne Asada Bowl.webp";
+import jackieImg from "../assets/jackieTalking.webp";
 import ColoredHeading from "../components/ColoredHeading";
 import HoursLocationWidget from "../components/HoursLocationWidget";
 import mountainImg from "../assets/mountainBike.jpg";
@@ -192,11 +193,14 @@ export default function Home() {
           <div className="community-row community-row--flipped">
             <div className="community-text">
               <span className="community-eyebrow">Community</span>
-              <h2 className="community-title">Local Roots, Lasting Connections</h2>
+              <h2 className="community-title">Partnering with Jackie Hering</h2>
               <p className="community-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. A
-                placeholder section for more information about what we do.
+                Oregon Bike Company is excited to partner with Jackie Hering, a
+                professional triathlete from the Madison area and one of the top
+                long-course athletes in the sport. Jackie has raced professionally
+                since 2011, has multiple IRONMAN and IRONMAN 70.3 wins, and finished
+                2nd in the 2024 IRONMAN Pro Series. We&apos;re proud that she trusts
+                Oregon Bike Company with her bike support and repair needs.
               </p>
               <Button
                 as={Link}
@@ -208,11 +212,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="community-image-wrap">
-              <img
-                src="https://placehold.co/600x400?text=Community"
-                alt="Community"
-                className="community-img"
-              />
+              <img src={jackieImg} alt="Jackie Hering" className="community-img" style={{ objectPosition: "center top" }} />
             </div>
           </div>
         </Container>

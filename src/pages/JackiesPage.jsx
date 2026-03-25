@@ -1,72 +1,149 @@
-import { Container, Row, Col } from 'react-bootstrap'
-import '../styles/JackiesPage.css'
+import { Container, Row, Col, Button } from "react-bootstrap";
+import ColoredHeading from "../components/ColoredHeading";
+import heroImg from "../assets/jackieWithBikeVertical.webp";
+import aboutImg from "../assets/jackieRiding.webp";
+import finishLineImg from "../assets/jackieCrossingFinishLine.webp";
+import firstPlaceImg from "../assets/jackieGettingFirst.webp";
+import ridingImg from "../assets/jackieRiding.webp";
+import runningImg from "../assets/jackieRunning.webp";
+import "../styles/JackiesPage.css";
 
-const collageImages = [
-  { src: 'https://placehold.co/400x400?text=Jackie+1', alt: 'Jackie photo 1', span: 'tall' },
-  { src: 'https://placehold.co/400x300?text=Jackie+2', alt: 'Jackie photo 2', span: '' },
-  { src: 'https://placehold.co/400x300?text=Jackie+3', alt: 'Jackie photo 3', span: '' },
-  { src: 'https://placehold.co/400x400?text=Jackie+4', alt: 'Jackie photo 4', span: '' },
-  { src: 'https://placehold.co/400x400?text=Jackie+5', alt: 'Jackie photo 5', span: 'tall' },
-  { src: 'https://placehold.co/400x300?text=Jackie+6', alt: 'Jackie photo 6', span: '' },
-]
+const stats = [
+  { text: "Madison-area pro triathlete", img: runningImg, alt: "Jackie running" },
+  { text: "Professional since 2011", img: ridingImg, alt: "Jackie riding" },
+  { text: "2nd in the 2024 IRONMAN Pro Series", img: finishLineImg, alt: "Jackie crossing finish line" },
+  { text: "Multiple IRONMAN and IRONMAN 70.3 wins", img: firstPlaceImg, alt: "Jackie winning first place" },
+];
+
+const links = [
+  {
+    label: "IRONMAN Athlete Profile",
+    href: "https://www.ironman.com/proseries/triathletes/jackie-hering",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/jackiemhering",
+  },
+];
 
 export default function JackiesPage() {
   return (
     <>
-      <Container className="py-5">
-        <h1 className="text-center">Jackie&apos;s Page</h1>
+      {/* Hero section */}
+      <section className="jackie-hero">
+        <Container>
+          <Row className="align-items-center g-4">
+            <Col xs={12} md={6} className="jackie-hero-img-col">
+              <img
+                src={heroImg}
+                alt="Jackie Hering with her bike in front of Oregon Bike Company"
+                className="jackie-hero-img"
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <div className="jackie-hero-text">
+                <ColoredHeading
+                  text="Oregon Bike Company x Jackie Hering"
+                  className="jackie-hero-heading"
+                />
+                <p className="jackie-hero-desc">
+                  Oregon Bike Company is proud to partner with Madison-area
+                  professional triathlete Jackie Hering. With a pro career
+                  spanning more than a decade, multiple IRONMAN and IRONMAN 70.3
+                  wins, and a runner-up finish in the 2024 IRONMAN Pro Series,
+                  Jackie is one of the sport&apos;s top long-course athletes,
+                  and we&apos;re honored that she trusts Oregon Bike Company with
+                  her bike service and support.
+                </p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
-        {/* Photo collage */}
-        <div className="collage-grid my-4">
-          {collageImages.map((img, i) => (
-            <div key={i} className={`collage-item ${img.span}`}>
-              <img src={img.src} alt={img.alt} className="collage-img" />
-            </div>
-          ))}
-        </div>
+      {/* Quick stats */}
+      <section className="jackie-stats-section">
+        <Container>
+          <Row className="g-3 justify-content-center">
+            {stats.map((stat, i) => (
+              <Col key={i} xs={6} md={3}>
+                <div className="jackie-stat-card">
+                  <img src={stat.img} alt={stat.alt} className="jackie-stat-img" />
+                  <p className="jackie-stat-text">{stat.text}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
 
-        {/* About Jackie */}
-        <Row className="justify-content-center my-5">
-          <Col xs={12} md={8} className="text-center">
-            <h2>About Jackie</h2>
-            <p className="jackie-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Jackie is a passionate cyclist and
-              an integral part of the Oregon Bicycle Company family.
-            </p>
-          </Col>
-        </Row>
+      {/* About / Partnership section */}
+      <section className="jackie-about-section">
+        <Container>
+          <Row className="align-items-center g-4">
+            <Col xs={12} md={6}>
+              <div className="jackie-about-text">
+                <ColoredHeading
+                  text="About Jackie"
+                  className="jackie-about-heading"
+                />
+                <p className="jackie-about-desc">
+                  Jackie Hering is a professional triathlete based in the Madison
+                  area who has built an impressive career in long-course racing.
+                  Racing professionally since 2011, she has earned a reputation
+                  for consistency, toughness, and high-level performances across
+                  IRONMAN and IRONMAN 70.3 competition. Along with multiple wins
+                  at the highest level, Jackie finished second overall in the
+                  2024 IRONMAN Pro Series and continues to compete among the best
+                  in the sport.
+                </p>
+                <p className="jackie-about-desc">
+                  As a local athlete, Jackie represents the kind of dedication,
+                  professionalism, and passion for endurance sport that fits
+                  naturally with what we value at Oregon Bike Company. We&apos;re
+                  proud to support her season and excited that she trusts our
+                  team with her bike service and repair needs.
+                </p>
+              </div>
+            </Col>
+            <Col xs={12} md={6}>
+              <img
+                src={aboutImg}
+                alt="Jackie Hering racing on her bike"
+                className="jackie-about-img"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
-        {/* Socials */}
-        <div className="text-center my-4">
-          <p className="socials-text">Go follow Jackie on her socials!</p>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="instagram-link"
-            aria-label="Jackie's Instagram"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
-          </a>
-        </div>
-      </Container>
+      {/* Follow Jackie links */}
+      <section className="jackie-links-section">
+        <Container className="text-center">
+          <ColoredHeading
+            text="Follow Jackie"
+            className="jackie-links-heading"
+          />
+          <p className="jackie-links-intro">
+            To keep up with Jackie&apos;s racing, results, and latest updates,
+            visit her pages below.
+          </p>
+          <div className="jackie-links-row">
+            {links.map((link, i) => (
+              <Button
+                key={i}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outline-primary"
+                className="jackie-link-btn"
+              >
+                {link.label}
+              </Button>
+            ))}
+          </div>
+        </Container>
+      </section>
     </>
-  )
+  );
 }

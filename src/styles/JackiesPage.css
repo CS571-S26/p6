@@ -1,68 +1,167 @@
-/* Collage grid */
-.collage-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+/* ── Hero ─────────────────────────────────────── */
+.jackie-hero {
+  padding: 3rem 0;
+  background: var(--color-bg);
 }
 
-.collage-item {
-  overflow: hidden;
-  border-radius: 6px;
+.jackie-hero-img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.collage-item.tall {
-  grid-row: span 2;
-}
-
-.collage-img {
+.jackie-hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 380px;
+  border-radius: 10px;
   display: block;
-  transition: transform 0.3s ease;
 }
 
-.collage-img:hover {
-  transform: scale(1.05);
+.jackie-hero-text {
+  max-width: 540px;
 }
 
-@media (max-width: 767px) {
-  .collage-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .collage-item.tall {
-    grid-row: span 1;
-  }
+.jackie-hero-heading {
+  margin-bottom: 1.25rem;
 }
 
-@media (max-width: 480px) {
-  .collage-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* About Jackie text */
-.jackie-text {
-  color: var(--text);
+.jackie-hero-desc {
+  color: var(--color-text);
+  font-size: var(--fs-md);
   line-height: 1.8;
 }
 
-/* Socials */
-.socials-text {
-  color: var(--text-h);
-  font-size: var(--fs-md);
-  font-weight: 500;
+/* ── Stats ────────────────────────────────────── */
+.jackie-stats-section {
+  padding: 2.5rem 0;
+  background: var(--color-bg-alt);
+}
+
+.jackie-stat-card {
+  background: var(--color-bg);
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.jackie-stat-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.jackie-stat-text {
+  color: var(--color-text-heading);
+  font-weight: 600;
+  font-size: var(--fs-base);
+  margin: 0;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* ── About ────────────────────────────────────── */
+.jackie-about-section {
+  padding: 3rem 0;
+  background: var(--color-bg);
+}
+
+.jackie-about-heading {
+  margin-bottom: 1.25rem;
+}
+
+.jackie-about-desc {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: var(--fs-base);
+}
+
+.jackie-about-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ── Links ────────────────────────────────────── */
+.jackie-links-section {
+  padding: 3rem 0 4rem;
+  background: var(--color-bg-alt);
+}
+
+.jackie-links-heading {
   margin-bottom: 0.75rem;
 }
 
-.instagram-link {
-  color: var(--color-text-heading);
-  transition: color 0.2s ease, transform 0.2s ease;
-  display: inline-block;
+.jackie-links-intro {
+  color: var(--color-text);
+  font-size: var(--fs-base);
+  margin-bottom: 1.5rem;
 }
 
-.instagram-link:hover {
-  color: #E1306C;
-  transform: scale(1.15);
+.jackie-links-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.jackie-link-btn {
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.jackie-link-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 767px) {
+  .jackie-hero {
+    padding: 2rem 0;
+  }
+
+  .jackie-hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .jackie-hero-img-col {
+    justify-content: center;
+  }
+
+  .jackie-hero-img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .jackie-stats-section {
+    padding: 2rem 0;
+  }
+
+  .jackie-about-section {
+    padding: 2rem 0;
+  }
+
+  .jackie-about-text {
+    text-align: center;
+  }
+
+  .jackie-about-img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }

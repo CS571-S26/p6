@@ -340,8 +340,13 @@
     margin-right: auto;
   }
 
+  .community-image-wrap {
+    width: 100%;
+  }
+
   .community-img {
     height: 240px;
+    width: 100%;
   }
 
   .community-section {

@@ -13,6 +13,7 @@ import bodihow3Img from "../assets/Carne Asada Bowl.webp";
 import jackieImg from "../assets/jackieTalking.webp";
 import ColoredHeading from "../components/ColoredHeading";
 import HoursLocationWidget from "../components/HoursLocationWidget";
+import ContactUsForm from "../components/ContactUsForm";
 import mountainImg from "../assets/mountainBike.jpg";
 import electricImg from "../assets/electricBike.jpg";
 import kidsImg from "../assets/kidsBike.jpg";
@@ -278,6 +279,9 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
+
+      {/* Contact Us */}
+      <ContactUsForm />
     </>
   );
 }

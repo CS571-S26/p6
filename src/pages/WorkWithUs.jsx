@@ -6,8 +6,6 @@ import '../styles/WorkWithUs.css'
 
 import heroImg from '../assets/workWithUs.webp'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:3001'
-
 export default function WorkWithUs() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -19,7 +17,7 @@ export default function WorkWithUs() {
     setLoading(true)
     const fd = new FormData(e.target)
     try {
-      const res = await fetch(`${API}/api/apply`, {
+      const res = await fetch('/apply.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

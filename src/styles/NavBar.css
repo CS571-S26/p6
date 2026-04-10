@@ -18,7 +18,7 @@
   box-shadow: none;
 }
 
-/* Logo image — zoomed/cropped to show bike detail */
+/* Logo image - zoomed/cropped to show bike detail */
 .obs-navbar .navbar-brand {
   width: 160px;
   height: 80px;
@@ -94,7 +94,7 @@
   background: var(--accent-bg);
 }
 
-/* "About Us" page link inside dropdown — styled slightly bolder */
+/* "About Us" page link inside dropdown - styled slightly bolder */
 .obs-dropdown-about-link {
   font-weight: 600;
   color: var(--text-h) !important;

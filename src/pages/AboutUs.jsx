@@ -5,7 +5,7 @@ import "../styles/AboutUs.css";
 import "../styles/BikeServiceRepair.css";
 import heroImg from "../assets/picOfMerch.webp";
 import staffImg1 from "../assets/macAndKrysten.webp";
-import staffImg2 from "../assets/Oliver.webp";
+// import staffImg2 from "../assets/Oliver.webp";
 import staffImg3 from "../assets/Miranda&Jamie.webp";
 import bikeQualityImg from "../assets/bike-quality.webp";
 import friendlyStaffImg from "../assets/friendly-staff.webp";
@@ -14,24 +14,24 @@ import bikePickupImg from "../assets/bike-pickup.webp";
 const staff = [
   {
     name: "Mac & Krysten",
-    description: "Short description about this team member and their role.",
+    description: "Krysten and Mac are proud co-owners of Oregon Bicycle Company and have lived in the Oregon community for over 20 years. Krysten has been enjoying cycling for 12 years and Mac has been cycling for 34 years. Their kids have also been involved in this wonderful activity for over a decade, so we can relate to cyclists' needs at various levels. We are excited to continue to grow the shop community and provide the friendly service, education, and support a local shop can provide.",
     image: staffImg1,
   },
-  {
-    name: "Oliver",
-    description: "Short description about this team member and their role.",
-    image: staffImg2,
-  },
+  // {
+  //   name: "Oliver",
+  //   description: "Short description about this team member and their role.",
+  //   image: staffImg2,
+  // },
   {
     name: "Miranda & Jamie",
-    description: "Short description about this team member and their role.",
+    description: "Miranda and Jamie Bush, proud co-owners of our local community bike shop, raised our three kids in Oregon. As triathletes who've tackled multiple Ironmans and are gearing up to race IM Wisconsin with our son this year, we're passionate about helping everyone stay active and connected. Whether you're training for your next adventure or just need reliable wheels to get around, we're thrilled to offer a true local option for bikes, service, and friendly connection.",
     image: staffImg3,
   },
-  {
-    name: "Maggie & Seth",
-    description: "Short description about this team member and their role.",
-    image: "https://placehold.co/600x600?text=Maggie+%26+Seth",
-  },
+  // {
+  //   name: "Maggie & Seth",
+  //   description: "Short description about this team member and their role.",
+  //   image: "https://placehold.co/600x600?text=Maggie+%26+Seth",
+  // },
 ];
 
 export default function AboutUs() {
@@ -55,7 +55,7 @@ export default function AboutUs() {
         <section className="about-section text-center mb-5">
           <ColoredHeading text="About Us" />
           <p className="about-description mx-auto">
-            Oregon Bike Company was built around a simple idea: a great local
+            Oregon Bicycle Company was built around a simple idea: a great local
             bike shop should do more than sell bikes. It should be a place that
             brings people together, supports the community, and helps more
             people enjoy life on two wheels. We’re proud to call Oregon,
@@ -65,17 +65,17 @@ export default function AboutUs() {
             explore new places, or simply enjoy a little more time outside. No
             matter what riding looks like for you, we believe a bike shop should
             feel welcoming, helpful, and rooted in the people it serves. That’s
-            what we aim to be at Oregon Bike Company — a local shop that values
+            what we aim to be at Oregon Bicycle Company, a local shop that values
             connection, community, and good service just as much as the bikes
             themselves.
           </p>
         </section>
 
-        {/* Why Oregon Bike Company */}
+        {/* Why Oregon Bicycle Company */}
         <section className="why-section mb-5">
-          <ColoredHeading text="Why Oregon Bike Company?" />
+          <ColoredHeading text="Why Oregon Bicycle Company?" />
           <p className="why-supporting">
-            We&apos;re proud to be a local bike shop serving Oregon, Wisconsin with
+            We are excited to be Oregon's local bike shop. We're proud to provide
             quality bikes, trusted service, and a welcoming community for riders
             of all ages and abilities.
           </p>
@@ -131,10 +131,10 @@ export default function AboutUs() {
                 />
                 <Card.Body>
                   <Card.Title className="why-card-title">
-                    Free Local Pickup
+                    A Hub for Gathering
                   </Card.Title>
                   <Card.Text className="why-card-text">
-                    Oregon Bike Company is more than a shop. We&apos;re a place for
+                    Oregon Bicycle Company is more than a shop. We&apos;re a place for
                     local riders to connect through events, group rides, shared
                     knowledge, and a love of being on two wheels.
                   </Card.Text>

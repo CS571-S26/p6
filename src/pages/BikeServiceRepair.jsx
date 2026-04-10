@@ -7,143 +7,75 @@ import heroImg from "../assets/zoomedOutService.webp";
 
 const tuneUps = [
   {
-    name: "Standard Tune-Up",
-    price: "$100",
-    description:
-      "Do you ride an urban cruiser, a basic hard-tail mountain bike, or an entry-level road bike? The standard tune-up will cover everything your bike needs.",
-    detail:
-      "We start by evaluating your bike for service. We check wear and tear on your bearings, chain, cassette, wheels, tires, brakes, shifters, and cables. We'll notify you if the bike needs any new parts due to damage or routine wear. All replacement parts are an additional charge and will require additional labor not included in the service package price.",
+    name: "Standard Tune",
+    price: "$139",
     features: [
-      "Complete Frame, Drivetrain, Chain, and Brake Cleaning",
-      "Bearing Adjustments and Assessment for Wear",
-      "Tighten and Torque Hubs, Cranks, Pedals, Headset and Bolts to Specification",
-      "Shift & Braking Adjustments",
-      "Wheel True Check Performed On Bike",
-      "Lubricate Chain",
-      "Safety Check",
-    ],
-    note: "If you have an e-bike, tri bike, full-suspension bike, or a bike with electronic shifting, your bicycle is ineligible for a Standard Tune-Up.",
-  },
-  {
-    name: "eBike Tune-Up",
-    price: "$150",
-    description:
-      "A service package designed to meet your electric bike's specific needs. Pete's is only certified to work on bikes with Bosch, Shimano, or Bafang electric motors and their corresponding batteries. We are committed to servicing all major brands we carry in our shop. Not sure if your bike is eligible? Contact us to inquire.",
-    detail:
-      "Like our standard tune-up, we start by evaluating your bike for service. We check wear and tear on your bearings, chain, cassette, wheels, tires, brakes, shifters, and cables. We'll notify you if the bike needs any new parts due to damage or everyday wear. All replacement parts are an additional charge and subject to additional labor fees.",
-    features: [
-      "Complete Frame, Drivetrain, Chain, and Brake Cleaning",
-      "Bearing Adjustments and Assessment for Wear",
-      "Tighten and Torque Hubs, Cranks, Pedals, Headset and Bolts to Specification",
-      "Shift & Braking Adjustments",
-      "Wheel True Check Performed On Bike",
-      "Lubricate Chain with eBike Specific Lubricant",
-      "Perform Any Firmware or Software Updates",
-      "Check Battery Life",
+      "Wipe down frame",
+      "Check drivetrain wear",
+      "Bearing adjustments and assessment for wear",
+      "Tighten and torque hubs, cranks, pedals, headset and bolts to specification",
+      "Shift & braking adjustments",
+      "Wheel true check performed on bike",
+      "Lubricate chain",
+      "Safety check",
     ],
   },
   {
-    name: "Full Suspension Bike Tune-Up",
-    price: "$150",
+    name: "E-Bike",
+    price: "$169",
     description:
-      "We like to ride our full suspension bikes hard and in all conditions, and we know you do, too. These bikes need a little extra TLC and thorough cleaning to keep them moving like they should — and eliminate those squeaks and rattles.",
-    detail:
-      "As always, we start by evaluating your bike for service. We check wear and tear on your suspension, bearings, chain, cassette, wheels, tires, brakes, shifters, and cables. We'll notify you if the bike needs any new parts or additional service due to damage or normal wear. All replacement parts are an additional charge and subject to additional labor fees.",
+      "We service E-bike electrical systems from TQ, Hyena, and Bosch. Please inquire about any other brands. We can support mechanical repairs on all brands but may not be equipped to deal with software and electrical issues. We cannot source off brand electrical parts and batteries.",
     features: [
-      "Complete Frame, Drivetrain and Brake Cleaning",
-      "Chain Strip and Prep for Lubricant",
-      "Tighten and Torque Hubs, Cranks, Pedals, Headset and Bolts to Specification",
-      "Linkages Cleaned and Tightened to Specification",
-      "Bearing Adjustments and Assessment for Wear",
-      "Shift & Braking Adjustments",
-      "Wheel True Check",
-      "Apply Chain Lubricant or Wax",
-      "Firmware and Software Updates (When Applicable)",
-      "Safety Check",
+      "Wipe down frame",
+      "Check drivetrain wear",
+      "Bearing adjustments and assessment for wear",
+      "Tighten and torque hubs, cranks, pedals, headset and bolts to specification",
+      "Shift & braking adjustments",
+      "Wheel true check performed on bike",
+      "Lubricate chain",
+      "Safety check",
+      "Check firmware and update",
     ],
   },
   {
-    name: "Tri Bike Tune-Up",
-    price: "$150",
-    description:
-      "You pour your blood, sweat, tears, and time into your training. We're here to make life a little easier by ensuring your bike performs at its best so you can focus on the next big race.",
-    detail:
-      "We start by evaluating your bike for service. We check for wear and tear on your bearings, chain, cassette, wheels, tires, brakes, shifters, and cables. We'll notify you if the bike needs any new parts or additional service due to damage or normal wear. All replacement parts are an additional charge and subject to additional labor fees.",
+    name: "Advanced Tune",
+    price: "$229",
     features: [
-      "Complete Frame, Drivetrain and Brake Cleaning",
-      "Chain Strip and Prep for Lubricant",
-      "Bearing Adjustments and Assessment for Wear",
-      "Tighten and Torque Hubs, Cranks, Pedals, Headset and Bolts to Specification",
-      "Shift & Braking Adjustments",
-      "Wheel True Check",
-      "Apply Chain Lubricant or Wax",
-      "Firmware and Software Updates (When Applicable)",
-      "Safety Check",
+      "Full bike cleaning",
+      "Chain strip and prep",
+      "Apply chain lube or wax",
+      "Check drivetrain wear",
+      "Drivetrain removed and cleaned",
+      "Bearing adjustments and assessment for wear",
+      "Tighten and torque hubs, cranks, pedals, headset and bolts to specification",
+      "Shift & braking adjustments",
+      "Wheels trued and tensioned off bike",
+      "Safety check",
     ],
   },
   {
-    name: "Performance Bike Tune-Up",
-    price: "$150",
+    name: "Complete Overhaul",
+    price: "Custom",
     description:
-      "Are you lucky enough to own a light-as-a-feather carbon road or gravel bike? How about a titanium hard-tail mountain bike? Did you ditch the cables and opt for electronic shifting? If so, a performance tune-up is for you.",
-    detail:
-      "We're ready to give your bike the care it deserves and help maintain your investment. Our initial evaluation will assess wear and tear on your suspension, bearings, chain, cassette, wheels, tires, brakes, shifters, and cables. We'll notify you if the bike needs any new parts or additional service due to damage. All replacement parts are an additional charge and subject to further labor fees.",
-    features: [
-      "Comprehensive Cleaning, with Drivetrain Removal",
-      "Chain Strip and Prep for Lubricant",
-      "Bearing Adjustments and Assessment for Wear",
-      "Tighten and Torque Hubs, Cranks, Pedals, Headset and Bolts to Specification",
-      "Shift & Braking Adjustments",
-      "Full Wheel True Performed Off Bike",
-      "Apply Chain Lubricant or Wax of Choice",
-      "Firmware and Software Updates (When Applicable)",
-      "Safety Check",
-    ],
-  },
-  {
-    name: "Premium Tune-Up",
-    price: "$250",
-    description:
-      "Our Premium Tune-Up is a recommended yearly service for all competition bikes of every discipline. This service package is a complete tear-down, deep cleaning, and rebuild to restore your bike to like-new condition.",
-    detail:
-      "We'll evaluate your bike's needs and help you select the best replacement parts to meet your goals. All replacement parts are an additional charge. We use Silca's top-of-the-line products to clean and degrease as we disassemble the bike, then painstakingly grease and reassemble from the ground up. Select from Silca's Ultimate Tubeless Sealant, Stan's No-Tubes, or Orange Seal. Choose from Ceramic Speed UFO Drip, Silca Synergetic Wet, Super Secret Chain Lube, or Silca Secret Chain Blend Hot Wax. We finish with Silca's Ultimate Graphene Spray Wax to protect your frame for 90 days. You won't recognize your bike once we're done.",
-    features: [
-      "Headset Disassembly and Cleaning",
-      "Groupset Removal and Degreasing",
-      "Bottom Bracket Removal and Cleaning",
-      "Chain Strip and Prep for Lubricant",
-      "Frame Cleaning, Waxing and Polishing with Silca Bicycle Spa",
-      "Reassembly: Headset, Bottom Bracket, Groupset Installed",
-      "New Cables and Housing Installed (When Applicable)",
-      "Replace Batteries in Shifters (When Applicable)",
-      "Handlebars Wrapped or New Grips Installed",
-      "All Bolts Tightened to Torque Specification",
-      "Linkages Regreased and Tightened to Specification (When Applicable)",
-      "Brake Bleed",
-      "Wheels Fully Trued and Tensioned",
-      "Reset Tubeless with Sealant of Choice",
-      "Apply Chain Lubricant or Wax",
-      "Firmware and Software Updates (When Applicable)",
-      "Safety Check",
-    ],
+      "Price and work performed based on assessment of bicycle.",
+    features: [],
   },
 ];
 
 const alaCarte = [
-  { service: "Shift Adjustment, Single", price: "$15" },
-  { service: "Brake Adjustment, Single", price: "$15" },
-  { service: "Brake Bleed, Single", price: "$35" },
+  { service: "Shift Adjustment, Rear", price: "$19" },
+  { service: "Brake Adjustment, Single Disc", price: "$19" },
+  { service: "Brake Bleed, Each", price: "$35" },
   { service: "Tire / Tube Install, Single*", price: "$15" },
-  { service: "Tubeless Set-up, Single*", price: "$30" },
-  { service: "Handlebar Wrap*", price: "$15" },
-  { service: "50-Hour Fork / Can Service*", price: "$70" },
-  { service: "200-Hour Fork Service*", price: "$200" },
-  { service: "Bike Wash", price: "$40" },
+  { service: "E-Bike Tire / Tube Install, Single*\u2020", price: "Up to $55" },
+  { service: "Tubeless Set-up, Single 2oz/4oz/6oz", price: "$13.50/$20/$21" },
+  { service: "Handlebar Wrap*", price: "$21" },
+  { service: "Bike Wash", price: "$50" },
   { service: "Chain Wax", price: "$40" },
-  { service: "Boxed Bike Build", price: "$150" },
-  { service: "Boxed eBike Build", price: "$200" },
+  { service: "Boxed Bike Build", price: "$135" },
+  { service: "Boxed E-Bike Build", price: "$189" },
   { service: "Kid's/BMX Bike Tune-Up*", price: "$50" },
-  { service: "Shop Rate", price: "$100/hr" },
+  { service: "Shop Rate", price: "$90/hr" },
 ];
 
 export default function BikeServiceRepair() {
@@ -168,19 +100,12 @@ export default function BikeServiceRepair() {
       <Container fluid="xl" className="py-5">
         {/* Intro */}
         <p className="obs-intro-text mb-2">
-          Whether it&apos;s a flat tire or a major overhaul, you can count on us
-          to do the job right the first time. Our skilled service technicians
-          are certified for repairs on all major bike brands, not just the ones
-          we sell. Many small repairs can be completed while you wait. If your
-          repairs will take more time, we&apos;ll give you an accurate estimate
-          of when your bicycle will be ready as well as the cost, and call you
-          when it&apos;s completed.
-        </p>
-        <p className="obs-intro-text mb-5">
-          If you&apos;re bringing your bike out of storage, want to show it some
-          love after a good season of riding, or just want to be sure everything
-          is in proper order before your next big excursion, choose one of our
-          tune-up packages for the best value!
+          At Oregon Bicycle Company, we work on all brands and types of bikes.
+          Whether you are competing for a championship or just want to ride
+          around the neighborhood on a properly functioning bicycle, we are here
+          to help. Many minor repairs can be done while you wait. Grab a coffee,
+          a beer, a couple tacos&hellip;sit at the bar and connect with the
+          mechanic while they take care of your bicycle.
         </p>
 
         <Row className="text-start gx-5 gy-5">
@@ -200,15 +125,17 @@ export default function BikeServiceRepair() {
                     <span className="obs-accordion-price">{pkg.price}</span>
                   </Accordion.Header>
                   <Accordion.Body className="obs-accordion-body">
-                    <p className="mb-3">{pkg.description}</p>
-                    <p className="mb-3">{pkg.detail}</p>
-                    <p className="obs-includes-label mb-2">Includes:</p>
-                    <ul className="obs-feature-list mb-4">
-                      {pkg.features.map((f) => (
-                        <li key={f}>{f}</li>
-                      ))}
-                    </ul>
-                    {pkg.note && <p className="obs-note mb-4">{pkg.note}</p>}
+                    {pkg.description && <p className="mb-3">{pkg.description}</p>}
+                    {pkg.features.length > 0 && (
+                      <>
+                        <p className="obs-includes-label mb-2">Includes:</p>
+                        <ul className="obs-feature-list mb-4">
+                          {pkg.features.map((f) => (
+                            <li key={f}>{f}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
                     <Button
                       as={Link}
                       to="/about/hours"
@@ -258,8 +185,11 @@ export default function BikeServiceRepair() {
                   ))}
                 </tbody>
               </table>
-              <p className="obs-note mb-4">
+              <p className="obs-note mb-1">
                 *Parts and materials not included.
+              </p>
+              <p className="obs-note mb-4">
+                &dagger;Dependent on wheel size and configuration.
               </p>
               <Button
                 as={Link}

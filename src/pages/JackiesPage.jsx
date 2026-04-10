@@ -36,23 +36,23 @@ export default function JackiesPage() {
             <Col xs={12} md={6} className="jackie-hero-img-col">
               <img
                 src={heroImg}
-                alt="Jackie Hering with her bike in front of Oregon Bike Company"
+                alt="Jackie Hering with her bike in front of Oregon Bicycle Company"
                 className="jackie-hero-img"
               />
             </Col>
             <Col xs={12} md={6}>
               <div className="jackie-hero-text">
                 <ColoredHeading
-                  text="Oregon Bike Company x Jackie Hering"
+                  text="Oregon Bicycle Company x Jackie Hering"
                   className="jackie-hero-heading"
                 />
                 <p className="jackie-hero-desc">
-                  Oregon Bike Company is proud to partner with Madison-area
+                  Oregon Bicycle Company is proud to partner with Madison-area
                   professional triathlete Jackie Hering. With a pro career
                   spanning more than a decade, multiple IRONMAN and IRONMAN 70.3
                   wins, and a runner-up finish in the 2024 IRONMAN Pro Series,
                   Jackie is one of the sport&apos;s top long-course athletes,
-                  and we&apos;re honored that she trusts Oregon Bike Company with
+                  and we&apos;re honored that she trusts Oregon Bicycle Company with
                   her bike service and support.
                 </p>
               </div>
@@ -100,7 +100,7 @@ export default function JackiesPage() {
                 <p className="jackie-about-desc">
                   As a local athlete, Jackie represents the kind of dedication,
                   professionalism, and passion for endurance sport that fits
-                  naturally with what we value at Oregon Bike Company. We&apos;re
+                  naturally with what we value at Oregon Bicycle Company. We&apos;re
                   proud to support her season and excited that she trusts our
                   team with her bike service and repair needs.
                 </p>

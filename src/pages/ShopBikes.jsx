@@ -80,7 +80,7 @@ export default function ShopBikes() {
           iframe.src = targetSrc;
         }
       } else {
-        // "All" — reset to default
+        // "All" - reset to default
         const defaultSrc = `https://oregonbicyclecompany.locally.com/search?embed_type=store&store=321934&uri=search&host_domain=${host}`;
         if (iframe.src !== defaultSrc) {
           iframe.src = defaultSrc;

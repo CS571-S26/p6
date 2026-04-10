@@ -1,4 +1,4 @@
-/* Local palette — maps to global theme tokens */
+/* Local palette - maps to global theme tokens */
 .obs-service-page {
   --shop-green:     var(--color-primary);
   --shop-green-dk:  var(--color-primary-dark);

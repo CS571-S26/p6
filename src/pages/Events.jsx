@@ -43,7 +43,7 @@ export default function Events() {
     <Container className="py-5">
       <ColoredHeading text="All Events" className="text-center mb-4" />
       <p className="events-intro mx-auto mb-3">
-        At Oregon Bike Company, we want to be more than just a bike shop, we want to be a place that brings the community together. Throughout the year, we host a variety of events designed to welcome riders in, build confidence, share knowledge, and celebrate life on two wheels.
+        At Oregon Bicycle Company, we want to be more than just a bike shop, we want to be a place that brings the community together. Throughout the year, we host a variety of events designed to welcome riders in, build confidence, share knowledge, and celebrate life on two wheels.
       </p>
       <p className="events-intro mx-auto mb-3">
         Along with our regular group rides and runs, that can include youth workshops, bike safety and skills sessions, maintenance clinics, community rides, and other shop events that help people learn, connect, and enjoy riding together.

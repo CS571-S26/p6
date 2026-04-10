@@ -54,7 +54,7 @@ export default function Home() {
       <Container className="py-5 text-center">
         <ColoredHeading text="About Us" className="home-heading" />
         <p className="about-home-text mx-auto">
-          At Oregon Bike Company, we see bikes as a way to connect people, slow
+          At Oregon Bicycle Company, we see bikes as a way to connect people, slow
           down, and enjoy the place we call home. We&apos;re proud to be part of the
           Oregon community and to create a welcoming shop centered around
           service, connection, and a love of riding.
@@ -174,7 +174,7 @@ export default function Home() {
                 Join us for weekly group runs and rides every Wednesday night,
                 along with other community events that are updated regularly on
                 our site. Whether you&apos;re coming out to ride, run, or just stay
-                connected, there&apos;s always something going on at Oregon Bike Company.
+                connected, there&apos;s always something going on at Oregon Bicycle Company.
               </p>
               <Button
                 as={Link}
@@ -196,12 +196,12 @@ export default function Home() {
               <span className="community-eyebrow">Community</span>
               <h2 className="community-title">Partnering with Jackie Hering</h2>
               <p className="community-desc">
-                Oregon Bike Company is excited to partner with Jackie Hering, a
+                Oregon Bicycle Company is excited to partner with Jackie Hering, a
                 professional triathlete from the Madison area and one of the top
                 long-course athletes in the sport. Jackie has raced professionally
                 since 2011, has multiple IRONMAN and IRONMAN 70.3 wins, and finished
                 2nd in the 2024 IRONMAN Pro Series. We&apos;re proud that she trusts
-                Oregon Bike Company with her bike support and repair needs.
+                Oregon Bicycle Company with her bike support and repair needs.
               </p>
               <Button
                 as={Link}

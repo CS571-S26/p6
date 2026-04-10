@@ -3,8 +3,6 @@ import { Container, Form, Button } from 'react-bootstrap'
 import ColoredHeading from './ColoredHeading'
 import '../styles/ContactUs.css'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:3001'
-
 export default function ContactUsForm() {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -16,7 +14,7 @@ export default function ContactUsForm() {
     setLoading(true)
     const fd = new FormData(e.target)
     try {
-      const res = await fetch(`${API}/api/contact`, {
+      const res = await fetch('/contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -38,7 +38,7 @@ export default function GroupRides() {
         <section className="text-center mb-5">
           <ColoredHeading text="Weekly Pub Run & Ride" />
           <p className="group-rides-intro mx-auto mb-4">
-            Join us on Wednesday nights for a weekly run, ride, or both — and
+            Join us on Wednesday nights for a weekly run, ride, or both, and
             enjoy your first beverage on us.
           </p>
           <Button
@@ -99,7 +99,7 @@ export default function GroupRides() {
                   <h3 className="pub-card-route-title">Current Route</h3>
                   <p className="pub-card-route-date">Updated 3/11/26</p>
                   <p className="pub-card-route-desc">
-                    Short Run — approx. 3 miles
+                    Short Run, approx. 3 miles
                   </p>
                   <Button
                     href="https://connect.garmin.com/app/course/434736096"
@@ -149,7 +149,7 @@ export default function GroupRides() {
                 <div className="pub-card-safety">
                   <strong>Please note:</strong> These rides take place on{" "}
                   <strong>open roads with no traffic control</strong>. These are{" "}
-                  <strong>not no-drop rides</strong> — connect with the group
+                  <strong>not no-drop rides</strong>. Connect with the group
                   before heading out if you'd like to ride together. Riders are
                   expected to know their route in advance.
                 </div>

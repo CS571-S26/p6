@@ -27,7 +27,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to      = 'qjbush@icloud.com'; // <-- replace with your email
+$to      = 'info@oregonbicycleco.com'; // <-- replace with your email
 $subject = 'New Job Application';
 $body    = "Name: $name\n";
 $body   .= "Email: $email\n";

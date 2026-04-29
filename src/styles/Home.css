@@ -279,7 +279,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   margin-bottom: 0.5rem;
 }
 

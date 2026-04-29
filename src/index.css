@@ -7,6 +7,7 @@
   /* -- Primary brand color -- */
   --color-primary:      #faaf41;   /* OBC yellow-orange: buttons, links, highlights */
   --color-primary-dark: #d4891a;   /* hover / active states                         */
+  --color-primary-text: #966005;   /* accessible amber for gold text — passes WCAG AA on white and cream backgrounds */
   --color-primary-bg:   #FEF7EB;   /* subtle tinted backgrounds (secondary gold)     */
   --color-on-primary:   #111111;   /* text ON the primary color (yellow needs dark)  */
 
@@ -28,7 +29,7 @@
   --color-footer-muted:   #888888;
   --color-footer-heading: #eeeeee;
   --color-footer-border:  rgba(255, 255, 255, 0.1);
-  --color-footer-copy:    #777777;
+  --color-footer-copy:    #888888;
 
   /* -- Font sizes (4 tiers) -- */
   --fs-xl:    2.75rem;    /* home page section headings        */
@@ -150,7 +151,7 @@ h2.section-heading {
 }
 
 .heading-accent {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 code {

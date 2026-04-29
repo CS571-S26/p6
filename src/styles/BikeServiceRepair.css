@@ -112,7 +112,7 @@
 
 .obs-accordion-item .accordion-button:not(.collapsed) {
   background: transparent;
-  color: var(--shop-green-dk);
+  color: var(--color-primary-text);
   box-shadow: none;
 }
 
@@ -129,7 +129,7 @@
 .obs-accordion-price {
   font-size: var(--fs-base);
   font-weight: 700;
-  color: var(--shop-green);
+  color: var(--color-primary-text);
   margin-right: 0.75rem;
   flex-shrink: 0;
 }
@@ -164,7 +164,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--shop-green);
+  color: var(--color-primary-text);
   font-size: var(--fs-sm);
   font-weight: 700;
   top: 0.125rem;
@@ -250,7 +250,7 @@
 .obs-step-number {
   font-size: var(--fs-lg);
   font-weight: 700;
-  color: var(--shop-green);
+  color: var(--color-primary-text);
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -338,7 +338,7 @@
 }
 
 .obs-form-success {
-  color: var(--shop-green);
+  color: var(--color-primary-text);
   font-weight: 600;
   font-size: var(--fs-base);
 }
@@ -376,7 +376,7 @@
 .obs-alacarte-table td:last-child {
   text-align: right;
   font-weight: 600;
-  color: var(--shop-green);
+  color: var(--color-primary-text);
   white-space: nowrap;
   padding-left: 0.75rem;
 }

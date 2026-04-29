@@ -114,7 +114,7 @@
 
 .jackie-link-btn {
   border-color: var(--color-primary);
-  color: var(--color-primary-dark);
+  color: var(--color-primary-text);
   font-weight: 500;
   border-radius: 8px;
   padding: 0.6rem 1.5rem;
